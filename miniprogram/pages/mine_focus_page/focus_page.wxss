@@ -1,0 +1,97 @@
+/* pages/mine_focus_page/focus_page.wxss */
+page {
+  background-color: #f6f6f6;
+}
+
+.title {
+  background-color: #fff;
+  color: #000;
+  font-size: 35rpx;
+  padding: 20rpx 20rpx 20rpx 40rpx;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 6rpx;
+  height: 20rpx;
+  background-color: #93D5DC;
+  position: absolute;
+  left: 20rpx;
+  top: 50%;
+  margin-top: -10rpx;
+  z-index: 1;
+}
+
+.box {
+  background-color: #fff;
+}
+
+.user-panel {
+  margin: 0 20rpx;
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+
+.head {
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+
+.center {
+  flex-grow: 1;
+  height: 80rpx;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.name-text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.nan {
+  font-size: 22rpx;
+  color: #1296db;
+  margin-top: 6rpx;
+}
+
+.nv {
+  font-size: 24rpx;
+  color: #ff3ec9;
+  margin-top: 6rpx;
+}
+
+.code {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 6rpx;
+}
+
+.follow {
+  flex-shrink: 0;
+  width: 90rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 6rpx;
+  background-color: #93D5DC;
+}
+
+.follows {
+  background-color: #999;
+}

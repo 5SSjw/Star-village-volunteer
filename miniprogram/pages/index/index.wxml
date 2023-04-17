@@ -1,0 +1,133 @@
+<view class="volunteer_index">
+	<!-- 搜索框 开始 -->
+	<!-- <SearchInput/> -->
+    <view>
+        <view class="top">
+            <view class="search" bindtap="search">
+            <view class="search_in">
+                <!-- 使用代码请更改图片路径 -->
+                <image src="../../images/sousuo.png"></image>
+                <input type="text" placeholder="请输入搜索内容"/>
+                <view class="search_btn">搜索</view>
+            </view>
+            </view>
+        </view>
+    </view>
+	<!-- 搜索框 结束 -->
+
+	<!-- 轮播图 开始 -->
+	<view class="index_swiper">
+		<swiper autoplay indicator-dots circular>
+			<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+				<navigator url="/pages/activity/index">
+					<image mode="widthFix" src="{{item.image_src}}" />
+				</navigator>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 轮播图 结束 -->
+	<!--通知开始-->
+	<view>
+		<i-notice-bar icon="systemprompt" loop>
+			志愿活动火热开启中，快来报名吧！
+		</i-notice-bar>
+	</view>
+	<!--通知结束-->
+	<!-- 导航栏 开始 -->
+	<!--
+	<view class="index_cate ">
+		<view
+		 bindtap="url"
+		 data-url="/pages/activity/index"
+		 class="item"
+		 wx:for="{{cateList}}"
+		 wx:key="key"
+		>
+			<view class="item-inner">
+				<view class="img">
+					<image src="{{item.image_src}}" />
+				</view>
+				<view class="title">{{item.name}}</view>
+			</view>
+		</view>
+
+</view>-->
+	<view class=" index_cate">
+		<navigator
+		 wx:for="{{cateList}}"
+		 wx:key="name"
+		 url="{{item.navigator_url}}"
+		 class="item"
+		>
+			<view class="item-inner">
+				<view class="img">
+					<image mode="widthFix" src="{{item.image_src}}" />
+				</view>
+				<view class="title">{{item.name}}</view>
+			</view>
+
+		</navigator>
+	</view>
+
+	<!-- 导航栏 结束 -->
+	<!--活动推荐-开始-->
+	<view class="index_recommendation">
+		<view class="title">
+			活动推荐
+		</view>
+		<view class="list">
+			<navigator
+			 class="activity_item"
+			 wx:for="{{activityList}}"
+			 wx:key="_id"
+			 url="/pages/activity_detail/index?_id={{item._id}}"
+			>
+				<!-- <i-card
+				 title="{{item.title}}"
+				 thumb="{{item.images[0]}}"
+				 mode="widthFix"
+				>
+          <view slot="content">主办方：{{item.host}}</view>
+          <view slot="footer">举办日期：{{item.ddl}}</view>
+					
+					<view slot="footer">报名时间：{{item.date_range}}</view>
+				</i-card> -->
+      <view class="cu-card"  wx:if="{{index<5}}">
+        <view class="cu-item bg-img shadow-blur" style="background-image: linear-gradient({{bg_color}});" wx:key="true">
+          <view class="cardTitle">{{item.title}}</view>
+          <view class="distance">{{'>20km'}}</view>
+          <view class="cu-list menu-avatar" style="border-radius: 25rpx;">
+          <view class="cu-item">
+
+            <image class="cu-avatar round lg" src="{{item.images[1]}}"></image>
+            <view class="content flex-sub">
+            <view class="text-grey">主办方：{{item.host}}</view>
+            <view class="text-gray text-sm flex justify-between">
+              招募人数：{{item.max_num}}
+              <view class="text-gray text-sm">
+              报名时间：{{item.date_range}}
+              </view>
+            </view>
+            </view>
+          </view>
+          </view>
+        </view>
+      </view>
+			</navigator>
+		</view>
+	</view>
+	<view class="more" bindtap="showMore">
+		<view class="more-dec">查看更多活动</view>
+		<image class="more-dec-img" src="../../images/right.png" />
+	</view>
+	<!--活动推荐-结束-->
+</view>
+
+<!-- 悬浮添加按钮 -->
+<!-- <navigator url="/pages/epidemic_detail/index">
+</navigator> -->
+<view bindtap='qiandao'>
+  <image class="add_icon" src="../../images/qiandao.png" bindtap="qiandao"></image>
+  <view class="add_txt">定位打卡</view>
+</view>
+

@@ -1,0 +1,133 @@
+/* #eff1f6  灰色分割线 */
+/*  #5ad7a9 主色*/
+
+view {
+  overflow: hidden;
+  box-sizing: border-box;
+  /* display: flex; */
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+cover-view {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+button {
+  line-height: 100%;
+  background-color: #0000;
+  padding: auto;
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+button::after {
+  border: none;
+}
+page {
+  height: 100%;
+}
+swiper {
+  height: auto;
+}
+tabLayout {
+  width: 100%;
+}
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+.w100 {
+  width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+.d-row {
+  display: flex;
+  flex-direction: row;
+}
+.d-column {
+  display: flex;
+  flex-direction: column;
+}
+.j-between {
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.j-center {
+  justify-content: center;
+  align-items: center;
+}
+.j-start {
+  justify-content: flex-start;
+  /* align-items: center; */
+}
+.j-end {
+  justify-content: flex-end;
+  /* align-items: center; */
+}
+.ft28{
+  font-size: 28rpx;
+}
+.ft30{
+  font-size: 30rpx;
+}
+
+.ml15 {
+  margin-left: 15rpx;
+}
+.ml24{
+  margin-left: 24rpx
+}
+.pl15 {
+  padding-left: 15rpx;
+}
+.img32 {
+  width: 32rpx;
+  height: 32rpx;
+}
+.img48 {
+  width: 48rpx;
+  height: 48rpx;
+}
+.font48 {
+  font-size: 48rpx;
+}
+.font32 {
+  font-size: 32rpx;
+}
+.mt20 {
+  margin-top: 20rpx;
+}
+.ml20 {
+  margin-left: 20rpx;
+}
+.mr20 {
+  margin-right: 20rpx;
+}
+.mb8 {
+  margin-bottom: 8rpx;
+}
+.mb15 {
+  margin-bottom: 15rpx;
+}
+.w80 {
+  width: 80%;
+}
+.b-border {
+  border-bottom: 1px solid black;
+}
+.bg-white {
+  background-color: white;
+}

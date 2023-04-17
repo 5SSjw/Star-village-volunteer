@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "志愿等级",
+  "i-card": "../../dist/card/index"
+}

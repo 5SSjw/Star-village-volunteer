@@ -1,0 +1,5 @@
+/* miniprogram/pages/index/success/success.wxss */
+
+page {
+  background-color: #fff;
+}

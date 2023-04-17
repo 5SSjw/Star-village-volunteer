@@ -1,0 +1,76 @@
+<!--pages/mine_about_page/index.wxml-->
+
+<view class="white_block">
+  <view class="info">
+    <view>
+      <image class="grade_touxiang" src="cloud://cloud1-2gdhip8y9d4f0c42.636c-cloud1-2gdhip8y9d4f0c42-1311633996/logo.png"></image>
+    </view>
+    
+    
+    <view>
+      <text class="bigColorText">星村志愿</text>
+    </view>
+    <view>
+      <text class="grade_and_score1">
+      
+      </text>
+    </view>
+    <view>
+      <text class="grade_and_score1">“星村志愿”小程序功能丰富且主题明确，将志愿活动分为多个类别，条理清晰，使得用户能“点对点”地找到想要参加的志愿活动，发挥自身优势，并可对参加的志愿活动进行体验分享。</text>
+    </view>
+    <view>
+      <text class="grade_and_score1">除此之外，本小程序从主题、空间等多个维度提供志愿搜索功能，并附加地图将志愿活动的地理分布可视化，且小程序提供了志愿者和志愿活动主办方之间的沟通交流渠道，使得志愿者能更好地了解志愿活动详情。此小程序设立了相应的奖励机制，志愿者可以凭借志愿时长、积分等获得相应奖励。</text>
+    </view>
+
+  </view>
+</view>
+
+
+<!-- <view class="white_block">
+  <view class="rule" style="margin-top: 20rpx;">
+    <view>一、参评条件</view>
+    <view style="margin-left: 40rpx;">遵守国家法律法规，热心社会公益事业，</view>
+    <view>积极弘扬和实践“奉献、友爱、互助、进步”的志愿服务精神；</view>
+    <view>二、志愿等级升级规则</view>
+    <view style="margin-left: 80rpx;">
+      <view>Lv1：志愿积分达到200分</view>
+      <view>Lv2：志愿积分达到500分</view>
+      <view>Lv3：志愿积分达到1000分</view>
+      <view>Lv4：志愿积分达到1500分</view>
+      <view>Lv5：志愿积分达到2000分</view>
+    </view>
+    <view>三、志愿积分说明</view>
+    <view style="margin-left: 40rpx;">志愿者参与志愿活动与参与社区评论均可</view>
+    <view>获得积分</view>
+    
+
+  </view>
+</view> -->
+
+
+<view class="white_block" style="margin-top: 20rpx; font-size: 40rpx;">开发者团队
+    <view>
+      <text class="grade_and_score">王汉彬（东北大学）</text>
+    </view>
+    <view>
+      <text class="grade_and_score">周呈星（东北大学）</text>
+    </view>
+    <view>
+      <text class="grade_and_score">宋经纬（东北大学）</text>
+    </view>
+    <view>
+      <text decode="{{true}}" class="grade_and_score">杨&nbsp;&nbsp;&nbsp;&nbsp;晨（东北大学）</text>
+    </view>
+</view>
+<view class="white_block" style="margin-top: 20rpx; font-size: 40rpx;">联系我们
+    <view>
+      <text class="grade_and_score">咨询有关本小程序问题请联系邮箱</text>
+    </view> 
+    <view>
+      <text class="grade_and_score">2015713717@qq.com</text>
+    </view> 
+</view>
+
+
+
+

@@ -1,0 +1,29 @@
+<map id="map" scale="{{defaultScale}}" longitude='{{longitude}}' latitude='{{latitude}}'
+  style='height:{{windowHeight}}px' markers="{{stores}}" subkey="{{mapSubKey}}" show-compass="{{true}}"
+  show-location="{{true}}" bindmarkertap="onMarkerTap">
+  <!-- 搜索按钮 -->
+
+  <!-- 查看全部 -->
+  <!-- <cover-view class="button2" >
+    
+  </cover-view> -->
+  <!-- <cover-view class="button show_all" bindtap="viewAll" bindlongpress='showAdmin'>查看全部</cover-view> -->
+  <!-- 定位 -->
+  <cover-view class="getLocation" bindtap="getCenterLocation">
+    <cover-image src="/images/getLocation.png"></cover-image>
+  </cover-view>
+  <!-- <view class="twoButton">
+    <button  bindtap='search' >搜索</button>
+    <button  bindtap='viewAll' >查看全部</button>
+  </view> -->
+  <cover-view class="getLocation1" bindtap="search">
+    <cover-image src="../../images/sousuo1.png"></cover-image>
+    <cover-view>搜索</cover-view>
+  </cover-view>
+
+  <cover-view class="getLocation2" bindtap="viewAll">
+    <cover-image src="../../images/quanbuhuodong.png"></cover-image>
+    <cover-view>全部活动</cover-view>
+  </cover-view>
+</map>
+

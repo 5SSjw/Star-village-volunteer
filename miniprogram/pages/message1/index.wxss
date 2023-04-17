@@ -1,0 +1,210 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /*padding: 200rpx 0;*/
+    box-sizing: border-box;
+    background: #F0F4F3;
+  }
+  
+  .container.withtab{
+    margin: 105rpx 0 0 0;
+    /*top: 105rpx;*/
+  }
+  .flex-wrp{
+    display: flex;
+  }
+  .flex-tab{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  .flex-item{
+    flex-grow: 1;
+    text-align: center;
+  }
+  .top-tab{
+    width: 750rpx;
+    height: 100rpx;
+    background: #ffffff;
+    color: #CDCDCD;
+    font-size: 34rpx;
+    line-height: 100rpx;
+    box-shadow: 0 2px 2px #f9fafa;
+    margin: 0 0 8rpx 0;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+  .toptab.active{
+    color: #ffd000;
+    border-bottom: solid 2px #ffd000;
+  }
+  .container{
+    padding: 0;
+    font-size: 14rpx;
+    color: #000;
+  }
+  .container .feed-item{
+    width: 690rpx;
+    padding: 30rpx 30rpx 20rpx;
+    margin: 7rpx 0 6rpx 0;
+    background: #ffffff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px #eeeeee;
+  }
+  .container .feed-item .feed-source{
+    width: 690rpx;
+    left: 0;
+    height: 50rpx;
+  }
+  .container .feed-item .feed-source .avatar{
+    position: relative;
+    display: inline-block;
+  }
+  .container .feed-item .feed-source a{
+    display: inline-block;
+    height: 40rpx;
+  }
+  .container .feed-item .feed-source .avatar image{
+    /*position: absolute;*/
+    display: inline-block;
+    width: 45rpx;
+    height: 45rpx;
+    border-radius: 45rpx;
+    top: 13rpx;
+    vertical-align: middle;
+  }
+  .container .feed-item .feed-source text{
+    /*position: absolute;*/
+    display: inline-block;
+    height: 40rpx;
+    line-height: 40rpx;
+    vertical-align: middle;
+    margin: 0 0 0 15rpx;
+    color: #a0acac;
+    font-size: 26rpx;
+  }
+  .container .feed-item .feed-source .item-more{
+    display: inline-block;
+    width: 40rpx;
+    height: 45rpx;
+    float: right;
+  }
+  .container .feed-item .feed-content{
+    padding: 10rpx 0 0 0;
+  }
+  .container .feed-item .feed-content .question text{
+    font-size: 28rpx;
+    font-weight: 600px;
+    line-height: 40rpx;
+    text-space: 5rpx;
+  }
+  .container .feed-item .feed-content .answer-body{
+    padding: 10rpx 0 0 0;
+    /*height: 10rpx;*/
+    font-size: 24rpx;
+    line-height: 28rpx;
+    color: #5b5b5b;
+  }
+  .container .feed-item .feed-content .answer-actions{
+    width: 690rpx;
+    padding: 10rpx 0  0;
+    color: #a0acac;
+  }
+  .container .feed-item .feed-content .answer-actions view{
+    display: inline-block;
+    vertical-align: text-bottom;
+    padding: 0 10rpx 0 0;
+    font-size: 24rpx;
+  }
+  .container .feed-item .feed-content .answer-actions .dot ::after{
+    content: "•";
+  }
+
+
+
+
+
+.tabs {
+	width: 750rpx;
+	height: 120rpx;
+	display: flex;
+	align-items: center;
+	padding: 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.tab_l {
+	width: 570rpx;
+	height: 110rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #f1f1f2;
+	padding-bottom: 10rpx;
+}
+
+.img {
+	width: 90rpx;
+	height: 90rpx;
+	margin-right: 30rpx;
+	border-radius: 10rpx;
+}
+
+.tabs_l2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.tab_r {
+	height: 100rpx;
+}
+
+.user_msg {
+	font-size: 28rpx;
+	color: #464646;
+}
+
+.user_f {
+	font-size: 32rpx;
+	color: #000;
+	margin-bottom: 10rpx;
+	font-weight: 500;
+
+}
+
+.time1 {
+	font-size: 26rpx;
+	color: #464646;
+}
+
+
+.UCenter-bg {
+  background-image: url(https://image.weilanwl.com/color2.0/index.jpg);
+  background-size: cover;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #0a0a0a;
+  font-weight: 600;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.UCenter-bg .gif-wave{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    mix-blend-mode: screen;  
+    height: 200rpx;   
+  }

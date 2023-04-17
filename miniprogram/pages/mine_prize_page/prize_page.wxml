@@ -1,0 +1,31 @@
+<!--pages/mine_prize_page/prize_page.wxml-->
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-pink"></text> 奖品展示
+  </view>
+</view>
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
+
+<view wx:for="{{swiperList}}" wx:key="index">
+  <view class="list">
+    <view class="list-img">
+      <image src="{{item.url}}"></image>
+    </view>
+    <view class="list-info">
+      <view class="title">{{item.name}}</view>
+      <view class="info">{{item.describe}}</view>
+      <view class="info-bottom">
+        <text class="price">{{item.score_needed+' '}}积分</text>
+      </view>
+      <button bindtap="exchange" class="cu-btn round line-yellow button-hover" style="height: 20%;width: 30%;left: 65%;top: 8%;" >兑换</button>
+    </view>
+  </view>
+</view>
+
+<view class="end">没有多的奖品了</view>
+

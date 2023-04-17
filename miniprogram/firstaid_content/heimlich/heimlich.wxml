@@ -1,0 +1,26 @@
+<view class="solids-bottom padding-xs flex align-center">
+    <view class="flex-sub text-center">
+      <view class="solid-bottom text-xl padding">
+        <text class="text-black text-bold">{{title}}</text>
+      </view>
+    </view>
+</view>
+<view style="display: flex;flex-flow: row nowrap;justify-content: space-between;">
+  <view class="cu-tag bg-gray light sm round" style="text-align: left;">来源：{{laiyuan}}</view>
+  <!-- <view style="text-align: right;"> 
+                <view class="cu-tag bg-red light sm round">{{firstaid_info.tag1}}</view>
+                <view class="cu-tag bg-green light sm round">{{firstaid_info.tag2}} </view>
+                <view class="cu-tag bg-black light sm round">{{firstaid_info.time}}</view>
+  </view> -->
+</view>
+<!-- <view style="  color:rgb(15, 15, 17);line-height: 80rpx;font-size: 35rpx;padding: 0 0rpx 0 10px;position: relative;text-indent: 2em;/* 空两格 */">
+  {{zixun_info.text}}
+</view> -->
+
+<view >
+   <view wx:for="{{mainContent}}" wx:key="*this">
+     <view wx:if="{{item.type=='txt'}}" style="  color:rgb(15, 15, 17);line-height: 80rpx;font-size: 35rpx;padding: 0 0rpx 0 10px;position: relative;text-indent: 2em;/* 空两格 */" >{{item.content}}</view>
+     <view wx:if="{{item.type=='head'}}" style="  color:rgb(240, 37, 11);line-height: 80rpx;font-size: 35rpx;padding: 0 0rpx 0 10px;position: relative;text-indent: 0em;/* 空两格 */" >{{item.content}}</view>
+     <image wx:if="{{item.type=='pic'}}" src="{{item.content}}" style="width: 100%;"></image>
+   </view>
+</view>

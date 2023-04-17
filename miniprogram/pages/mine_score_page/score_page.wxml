@@ -1,0 +1,80 @@
+<!--pages/score_page/score_page.wxml-->
+<view class="white_block">
+  <view class="info">
+    <view>
+      <image class="grade_touxiang" src="{{faceIMG}}"></image>
+    </view>
+    <view class="grade_nicheng">{{nickName}}</view>
+  </view>
+  <view class="textCenter">
+    <text class="scoreColor">{{score}}</text>
+  </view>
+</view>
+
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ 
+<!--收入-->
+<view hidden="{{currentTab!==0}}">
+  <view>
+    <view class="cu-bar bg-white solid-bottom" style="margin-top: 4rpx;">
+      <text class="cuIcon-title text-orange" style="color: #93D5DC;">参与志愿活动</text> 
+    </view>
+      <view wx:for="{{swiperList}}" wx:key="index">
+        <view class="list">
+          <view class="list-img">
+            <image src="{{item.url}}"></image>
+          </view>
+          <view class="list-info">
+            <view class="title">{{item.name}}</view>
+            <view class="info">{{item.info_detail}}</view>
+            <view class="info-bottom">
+              <text class="price">+ {{item.hour}}积分</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="end" bindtap="toTimePage">点击查看全部</view>
+  </view>
+  <view>
+    <view class="cu-bar bg-white solid-bottom" style="margin-top: 4rpx;">
+      <text class="cuIcon-title text-orange" style="color: #93D5DC;">参与社区评论</text> 
+    </view>
+    <view class="end" bindtap="toCommunityPage">点击前往发表动态</view>
+  </view>
+</view>
+ 
+<!--支出-->
+<view hidden="{{currentTab!==1}}">
+  <view class="list">
+    <view class="list-img">
+      <image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.AXrkzZHhj7O5DZnubat73QHaFj?w=208&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"></image>
+    </view>
+    <view class="list-info">
+      <view class="title">滑板</view>
+      <view class="info">DBH 滑板是滑板的一个品牌，截止2021年，在全国拥有300余家实体经销商。DBH 滑板的口号是：“用心做，用心滑。”</view>
+      <view class="info-bottom">
+        <text class="price">- 200积分</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list">
+    <view class="list-img">
+      <image src="https://tse1-mm.cn.bing.net/th/id/OIP-C.MNiPxIgxxgIFlEOISgxftAHaE6?w=281&h=186&c=7&r=0&o=5&dpr=1.25&pid=1.7"></image>
+    </view>
+    <view class="list-info">
+      <view class="title">万用笔记本</view>
+      <view class="info">说到笔记，相信更多人首先想起的是印象笔记、Bear 等著名的笔记 app，网络上关于笔记的各种使用技巧、攻略更是数不胜数。. 实际上，你真的需要那么强大的功能吗？. 对于很多人来说，他们可能更</view>
+      <view class="info-bottom">
+        <text class="price">- 30积分</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+

@@ -1,0 +1,73 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="{{faceIMG}}" class="png" mode="widthFix"style="border-radius: 50%;"></image>
+    <view class="text-xl" style="margin-top: 20rpx;">{{nickName}}
+    </view>
+    <image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="margin-top-sm" bindtap="collection" hover-class="bnt-hover">
+        <text class="cuIcon-attentionfill"></text> 我的收藏
+      </view>
+    </view>
+    <!-- <view class="flex flex-sub flex-direction solid-right">
+      <view class="margin-top-sm" bindtap="focus" hover-class="bnt-hover">
+        <text class="cuIcon-favorfill"></text> 我的关注
+      </view>
+    </view> -->
+    <view class="flex flex-sub flex-direction">
+      <view class="margin-top-sm" bindtap="add" hover-class="bnt-hover">
+        <text class="cuIcon-fork"></text> 内容管理
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view bindtap="toGradePage" class="cu-item arrow">
+      <navigator class="content" url="../mine_grade_page/grade_page" hover-class="bnt-hover">
+        <text class="cuIcon-rankfill text-grey"></text>
+        <text class="text-grey">志愿等级：Lv{{' '+grade}}</text>
+      </navigator>
+    </view>
+    <view bindtap="toTimePage" class="cu-item arrow">
+      <navigator class="content" hover-class="bnt-hover">
+        <text class="cuIcon-timefill lg text-gray" style="color: rgb(203, 174, 230);"></text>
+        <!-- <image src="../imgs/add.png" class="png" mode="aspectFit"></image> -->
+        <text class="text-grey">志愿时长：{{timeLen+'  '}} h</text>
+      </navigator>
+    </view>
+    <view bindtap="toScorePage" class="cu-item arrow">
+      <navigator class="content" hover-class="bnt-hover">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">志愿积分：{{score}}</text>
+      </navigator>
+    </view>
+    <view bindtap="toPrizePage" class="cu-item arrow">
+      <navigator class="content" hover-class="bnt-hover">
+        <text class="cuIcon-presentfill text-red"></text>
+        <text class="text-grey">奖品</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="contact">
+        <text class="cuIcon-service lg text-gray" style="color: rgb(192, 172, 141);"></text>
+        <text class="text-grey">客服</text>
+      </button>
+    </view>
+    <view bindtap="toAboutPage" class="cu-item arrow">
+      <navigator class="content" hover-class="bnt-hover">
+        <text class="cuIcon-infofill lg text-gray" style="color: rgb(160, 160, 160);"></text>
+        <!-- <image src="../imgs/add.png" class="png" mode="aspectFit"></image> -->
+        <text class="text-grey">关于</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

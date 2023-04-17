@@ -1,0 +1,75 @@
+<view class="list">
+	<navigator url="/pages/epidemic_detail/index">
+      <view class="cu-card">
+        <view class="cu-item bg-img shadow-blur" style="background-image: linear-gradient({{bg_color}});" wx:key="true">
+          <view class="cardTitle">
+          疫情防控
+          </view>
+          <view class="cu-list menu-avatar" style="border-radius: 25rpx;">
+          <view class="cu-item">
+            <view class="cu-avatar round lg" style="background-image:url(https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/fangkongban.png?sign=fe2f1608d2bd723d8120c9611ef4ed8a&t=1658822817);"></view>
+            <view class="content flex-sub">
+            <view class="text-grey">主办方：上海市疫情防控办</view>
+            <view class="text-gray text-sm flex justify-between">
+              招募人数：25人
+              <view class="text-gray text-sm">
+              招募时间：2022.3.12-2022.3.22
+              </view>
+            </view>
+            </view>
+          </view>
+          </view>
+        </view>
+      </view>
+	</navigator>
+</view>
+<view class="list">
+	<navigator url="/pages/epidemic_detail/index1">
+      <view class="cu-card">
+        <view class="cu-item bg-img shadow-blur" style="background-image: linear-gradient({{bg_color}});" wx:key="true">
+          <view class="cardTitle">
+          核酸检测志愿招募
+          </view>
+          <view class="cu-list menu-avatar" style="border-radius: 25rpx;">
+          <view class="cu-item">
+            <view class="cu-avatar round lg" style="background-image:url(https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/%E6%9D%91%E5%A7%94%E4%BC%9A2.png?sign=866ba1161d8d5caed8e07c0d639ae978&t=1658822627);"></view>
+            <view class="content flex-sub">
+            <view class="text-grey">主办方：台村村委会</view>
+            <view class="text-gray text-sm flex justify-between">
+              招募人数：30人
+              <view class="text-gray text-sm">
+              招募时间：2022.3.12-2022.3.22
+              </view>
+            </view>
+            </view>
+          </view>
+          </view>
+        </view>
+      </view>
+	</navigator>
+</view>
+<view class="list">
+	<navigator url="/pages/epidemic_detail/index2">
+      <view class="cu-card">
+        <view class="cu-item bg-img shadow-blur" style="background-image: linear-gradient({{bg_color}});" wx:key="true">
+          <view class="cardTitle">
+          民村物资配送志愿招募
+          </view>
+          <view class="cu-list menu-avatar" style="border-radius: 25rpx;">
+          <view class="cu-item">
+            <view class="cu-avatar round lg" style="background-image:url(https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/%E6%9D%91%E5%A7%94%E4%BC%9A1.png?sign=30f42c6205959c92eaca235af0dd1a85&t=1658822698);"></view>
+            <view class="content flex-sub">
+            <view class="text-grey">主办方：民村村委会</view>
+            <view class="text-gray text-sm flex justify-between">
+              招募人数：10
+              <view class="text-gray text-sm">
+              招募时间：2022.4.20-2022.5.1
+              </view>
+            </view>
+            </view>
+          </view>
+          </view>
+        </view>
+      </view>
+	</navigator>
+</view>

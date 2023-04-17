@@ -1,0 +1,66 @@
+<scroll-view class="page2" bindtap="offEmoji" scroll-y style='height:{{Height + "px"}}' scroll-into-view="{{ 'a' + into}}" scroll-anchoring="true">
+	<block wx:for="{{info_list}}" wx:key="index">
+		<!--发出的 info -->
+		<view class="info_box2" wx:if="{{item.sendUserId == openId}}" id="{{'a' + item._id}}" data-id="{{item._id}}" bindlongtap="remove_msg">
+			<image class="headImg2" src="{{userInfo.avatarUrl}}"></image>
+			<view class="info_title gr">
+				<!-- <block wx:if="{{item.emoji}}">
+					<image class="emoji" src="{{item.emoji}}"></image>
+				</block> -->
+				<block wx:if="{{item.value}}">
+					<view>{{item.value}}</view>
+				</block>
+			</view>
+		</view>
+
+		<!--收到的 info -->
+		<view class="info_box" wx:if="{{item.sendUserId != openId}}" id="{{ 'a' + item._id}}">
+			<image class="headImg" src="{{userInfo.avatarUrl == item.AavatarUrl?item.BavatarUrl:item.AavatarUrl}}"></image>
+
+      <view class="info_title wt">
+				<!-- <block wx:if="{{item.emoji}}">
+					<image class="emoji" src="{{item.emoji}}"></image>
+				</block> -->
+				<block wx:if="{{item.value}}">
+			   	<view>{{item.value}}</view>
+			  </block>
+			</view>
+			<!-- <block wx:if="{{item.emoji}}">
+				<image class="emoji" src="{{item.emoji}}"></image>
+			</block> -->
+		</view>
+	</block>
+	<view class="bb110"></view>
+</scroll-view>
+
+<!-- 底部发送区域 -->
+<view class="input_box">
+	<view class="input_box1">
+		<image class="img1" src="../../images/voice.png"></image>
+		<input class="ipt" confirm-type="send" confirm-hold value="{{user_value}}" bindinput="input_value" bindconfirm="snedtTo" adjust-position="false" cursor-spacing="10rpx"></input>
+		<image class="input_img m20" src="../../images/emoji.png" bindtap="onEmoji"></image>
+		<image class="input_img m20" src="../../images/more.png" bindtap="onFeatures"></image>
+	</view>
+
+	<view class="input_box2" wx:if="{{isOn}}">
+		<block wx:for="{{emoji_list}}" wx:key="index" wx:if="{{isTabs == 'emoji'}}">
+			<image class="emoji" data-src="{{item.imgSrc}}" src="{{item.imgSrc}}" bindtap="sendEmoji"></image>
+		</block>
+
+        <block wx:if="{{isTabs == 'features'}}">
+			<view class="feat1" bindtap="toAddUser">
+				<image class="featImg" src="../../images/picture.png"></image>
+				<view class="featTitle">相册</view>
+			</view>
+			<view class="feat1" bindtap="toAddUser">
+				<image class="featImg" src="../../images/photo.png"></image>
+				<view class="featTitle">拍摄</view>
+			</view>
+            <view class="feat1" bindtap="toAddUser">
+				<image class="featImg" src="../../images/file.png"></image>
+				<view class="featTitle">文件</view>
+			</view>
+		</block>
+
+	</view>
+</view>

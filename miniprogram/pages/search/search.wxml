@@ -1,0 +1,41 @@
+<view class="search_box">
+  <input class='search_input' type="text" confirm-type="search" placeholder="请输入要搜索的关键词" bindconfirm="search" focus='{{focus}}'></input>
+</view>
+<block wx:if="{{stores}}" wx:for="{{stores}}" wx:key="_id">
+  <navigator url="../info/info?id={{item._id}}">
+    <!-- <view class="card">
+      <view class="card_title">{{item.title}}</view>
+      <view class="card_infobar">
+        <view class="card_address">{{item.address}}</view>
+      </view>
+    </view> -->
+    <view class="cu-card article " >
+      <view class="cu-item shadow">
+        <view class="title">
+        <!-- 标题 -->
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.images[0]}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content"> {{item.introduction}}</view>
+            <view style="text-align: left;">
+              <view class="cu-tag bg-red light sm round">地址:{{item.address}}</view>
+              <!-- <view class="cu-tag bg-green light sm round">{{item.tag2}} </view>
+              <view class="cu-tag bg-black light sm round">{{item.time}} </view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</block>
+<block wx:if="{{stores.length == 0 && !searched}}">
+  <view class="not_found">请点击上方搜索框输入要搜索的关键字</view>
+</block>
+<block wx:if="{{searched}}">
+  <view class="no_result_button">
+    没有找到心仪的志愿活动？不妨去看看其他活动?
+    <navigator url="../list/list" open-type="redirect" class="button view_all">查看全部</navigator>
+  </view>
+</block>

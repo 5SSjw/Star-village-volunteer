@@ -1,0 +1,54 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/%E6%9A%97.jpg?sign=e26b7084891f693aeaf17b766a7b8ffa&t=1664584459');
+  background-size: 100% 100%;
+  /* background-color: #ffd000; */
+  /* background: linear-gradient(to bottom, #ffd000 0%, #57E9F2 68%); */
+}
+
+.header {
+  margin: 250rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+ }
+   
+ .header image {
+  width: 200rpx;
+  height: 200rpx;
+ }
+   
+ .content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+ }
+   .jianju{
+     height: 80vh;
+   }
+ .content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+ }
+   
+ /* .bottom {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+  } */
+
+  /* 半透明渐变 */
+.bottom{
+  /* margin-top: 40rpx; */
+  /* bottom: 0; */
+  /* padding-top: 45vh; */
+  background: #ffd000; 
+  width: 50%;  
+  border-radius: 50rpx;
+  padding-left: 20rpx;
+  /* background: bg_red; */
+}
+

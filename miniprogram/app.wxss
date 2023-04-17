@@ -1,0 +1,27 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+/* 主题颜色 通过变量来实现 */
+@import 'styles/weui.wxss';
+
+page{
+  /* 定义主题颜色 */
+  /* 只是定义，还未使用 */
+  --themeColor:118deg, #ffd000 0%, #57E9F2 68%, #ffd000 17%;
+  /* 定义统一字体大小 */
+  font-style:24rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+

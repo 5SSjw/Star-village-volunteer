@@ -1,0 +1,73 @@
+<!--pages/grade_page/grade_page.wxml-->
+<view class="white_block">
+  <view class="info">
+    <view>
+      <image class="grade_touxiang" src="{{faceIMG}}"></image>
+    </view>
+    <view class="grade_nicheng">{{nickName}}</view>
+
+    <view>
+      <text class="bigColorText">Lv{{grade}}</text>
+    </view>
+    <view>
+      <text class="grade_and_score">您的积分为：</text>
+      <text class="colorText">{{score}}</text>
+      <text class="grade_and_score">点积分</text>
+    </view>
+    
+    <view>
+      <text class="grade_and_score">距离升级还差：</text>
+      <text class="colorText">100</text>
+      <text class="grade_and_score">点积分</text>
+    </view>
+
+    <view class="cu-progress round sm striped" style="margin-top: 10rpx; align-items: center;">
+      <view class="bg-cyan" style="width: 80%"></view>
+    </view>
+  </view>
+</view>
+
+<view class="white_block" style="margin-top: 60rpx; font-size: 40rpx;">志愿等级规则：</view>
+
+<view class="white_block">
+  <view class="rule" style="margin-top: 10rpx;">
+    <view>一、参评条件</view>
+    <view style="margin-left: 40rpx;">遵守国家法律法规，热心社会公益事业，</view>
+    <view>积极弘扬和实践“奉献、友爱、互助、进步”的志愿服务精神；</view>
+    <view>二、志愿等级升级规则</view>
+    <view style="margin-left: 80rpx;">
+      <view>Lv1：志愿积分达到200分</view>
+      <view>Lv2：志愿积分达到500分</view>
+      <view>Lv3：志愿积分达到1000分</view>
+      <view>Lv4：志愿积分达到1500分</view>
+      <view>Lv5：志愿积分达到2000分</view>
+    </view>
+    <view>三、志愿积分说明</view>
+    <view style="margin-left: 40rpx;">志愿者参与志愿活动与参与社区评论均可</view>
+    <view>获得积分</view>
+    
+
+  </view>
+</view>
+
+
+<view class="white_block" style="margin-top: 60rpx; font-size: 40rpx;">志愿活动推荐：</view>
+
+<view wx:for="{{swiperList}}" wx:key="index">
+  <view class="list">
+    <view class="list-img">
+      <image src="{{item.url}}"></image>
+    </view>
+    <view class="list-info">
+      <view class="title">{{item.name}}</view>
+      <view class="detail">{{item.info_detail}}</view>
+      <view class="detail-bottom">
+        <text class="price">+ {{item.hour}}小时</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="end" bindtap="goToAllActivity">点击查看更多</view>
+
+

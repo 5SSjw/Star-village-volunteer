@@ -1,0 +1,81 @@
+<!--index.wxml-->
+
+<import src="/pages/common/footer.wxml" />
+
+<view class="container" wx:if="{{ !hasUserInfo }}">
+  <view class="userinfo" style="margin: 0 20px;">
+    <image class="userinfo-avatar" mode="cover" src='/images/logo.png'></image>
+    <text class="userinfo-nickname">要么旅行，要么读书，</text>
+    <text class="userinfo-nickname">身体和灵魂必须有一个在路上。</text>
+    <text class="userinfo-nickname">——张小砚 《走吧，张小砚》</text>
+  </view>
+  <view class="usermotto" style='margin-top: 50rpx;'>
+    <text class="user-motto">{{ motto }}</text>
+    <button class='weui-btn' type='primary' wx:if="{{ !hasUserInfo && canIUse }}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+  </view>
+
+  <view class="weui-footer weui-footer_fixed-bottom" style="margin-top: 25px; margin-bottom: 40px;">
+    <view class="weui-footer__links">
+    </view>
+    <view class="weui-footer__text">Copyright © 2022 星村志愿</view>
+  </view>
+</view>
+
+<view class="container" wx:if="{{ !hasLocation && hasUserInfo }}">
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-nickname">\n</text>
+    <text class="userinfo-nickname">星村志愿，</text>
+    <text class="userinfo-nickname">一颗星星照耀一片土地。</text>
+    <!-- <text class="userinfo-nickname">——张小砚 《走吧，张小砚》</text> -->
+  </view>
+  <view class="usermotto" style='margin-top: 50rpx; '>
+    <text class="user-motto">{{ motto }}</text>
+    <button class='weui-btn' type='primary' style="margin-top: 50px;" bindtap='getAddress'>使用当前位置签到</button>
+  </view>
+
+  <view class="weui-footer weui-footer_fixed-bottom" style="margin-top: 225px; margin-bottom: 5px;">
+    <view class="weui-footer__links">
+    </view>
+    <view class="weui-footer__text">Copyright © 2022 星村志愿</view>
+  </view>
+
+</view>
+
+
+<view class='page' wx:if="{{ hasLocation }}">
+
+  <view class="page__bd page__bd_spacing">
+    <button wx:if="{{ !hasLocation }}" class='weui-btn' type='primary' bindtap='getAddress' style="margin: 80px 0;">获取当前位置</button>
+
+    <view wx:else>
+      <view class="page__desc">
+        您当前的位置是“{{ location_details.address }} {{ location_details.formatted_addresses.recommend }}”
+      </view>
+      <!-- <view class="page__desc">
+        距离您最近最著名的地方是“{{ location_details.address_reference.famous_area.title }}”
+      </view> -->
+      <view class="page__desc" style="font-size: 16px;">
+        经度{{ location_details.location.lng }}，纬度{{ location_details.location.lat }}
+      </view>
+      
+      <map longitude="{{ location_details.location.lng }}" latitude="{{ location_details.location.lat }}" subkey="PK4BZ-VSGLP-NCUD7-VSW7T-UALLF-2EFJ2" show-location></map>
+
+      
+      <view class="weui-cells__title" style="font-size: 18px; margin-left: 30px;margin-top: 30px;">定位不准确？试试手动选择你的位置吧!</view>
+      <button class='weui-btn' type='primary' style="background-color: #ffd000;margin-top: 30px;" bindtap='chooseLocation'>打开地图选择位置</button>
+      <button class='weui-btn' type='primary' style="background-color: #ffd000;" bindtap='getAddress'>重新获取当前位置</button>
+      <button class='weui-btn' type='primary' style="background-color: #ffd000;" bindtap='mark'>打卡</button>
+      <button class='weui-btn' type='primary' style="background-color: #ffd000;" bindtap='signinrecord'>查看我的打卡记录</button>
+    </view>
+
+
+    <!-- <view class="weui-footer weui-footer_fixed-bottom" style="margin-top: 225px; margin-bottom: 5px;">
+      <view class="weui-footer__links">
+      </view>
+      <view class="weui-footer__text">Copyright © 2022 星村志愿</view>
+    </view> -->
+
+  </view>
+</view>

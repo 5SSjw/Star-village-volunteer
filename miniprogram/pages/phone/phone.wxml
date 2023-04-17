@@ -1,0 +1,26 @@
+<!--pages/phone/phone.wxml-->
+<!-- 页面根 -->
+<view class="imagesize">
+  <image src='https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/%E6%B1%82%E5%8A%A9%E7%94%B5%E8%AF%9D.png?sign=83fd158c45d32f959f55a5c9ee55067b&t=1664585791' mode='widthFix' class='png' style='width:90%'></image>
+</view>
+<view class="title">
+  <text class='cuIcon-phone'></text>
+  <text>一键拨号</text>
+</view>
+<view class='nav-list'>
+    <view bindtap="calling" data-num="{{item.phoneNumber}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </view>
+</view>
+<!-- <view class="pageRoot"> -->
+  <!-- 页面内容超出屏幕时可滑动 -->
+  <!-- <scroll-view scroll-y="true">
+    <view class="scrollView">
+      <view class="content" bindtap="calling"  wx:for="{{items}}" wx:key="index">
+        <text>{{items[index]}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view> -->

@@ -1,0 +1,172 @@
+/* pages/oil-detail/oil-detail.wxss */
+@import "/common/base.wxss";
+
+
+
+.adver{
+  position: relative;
+}
+.img-ad{
+  height: 400rpx;
+  width: 100%;
+}
+.botany-name{
+  width: 100%;
+  background: #ffd000;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333333;
+  display: flex;
+  text-align: left;
+  align-content: flex-start;
+  padding: 30rpx;
+}
+.botany-name view{
+  width: 100%;
+}
+.data-name{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: rgb(172, 172, 172)
+}
+.flower-name{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.flower-englist-name{
+  font-size: 32rpx;
+  color: rgb(172, 172, 172);
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.introduce{
+  background: #ffffff;
+  margin: 25rpx;
+  padding: 25rpx;
+  margin-bottom: 25rpx;
+}
+.introduce-title{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: rgb(172, 172, 172);
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.english-name{
+  font-size: 32rpx;
+  color: rgb(172, 172, 172);
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.introduce-content{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #333333;
+  padding-bottom: 15rpx;
+}
+.solid-bottom{
+  border-bottom: 1rpx solid rgb(223, 220, 220)
+}
+.list-infor {
+  padding: 15rpx 0rpx;
+  line-height: 60rpx;
+}
+.nav-01{
+  flex: 1;
+  padding-left: 15rpx;
+}
+.list-02{
+  color: rgb(172, 172, 172);
+}
+.qg-img{
+  width: 64rpx;
+  height: 64rpx;
+}
+.txt-infor{
+  margin-left: 25rpx;
+}
+.txt-001{
+  color: red;
+  font-weight: 600
+}
+.footer {
+  position: relative;
+  height: 200rpx;
+  width: 100%;
+  margin-bottom: 70rpx;
+}
+
+.support {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #666666;
+}
+.footer:after {
+  content: "";
+  position: absolute;
+  width: 400rpx;
+  left: 50%;
+  top: 53%;
+  right: 0;
+  transform: translateX(-50%);
+  border-top: 2rpx solid #0a0a0a;
+}
+.posControl {
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.footerBar {
+  position: relative;
+  width: 100%;
+  height: 200rpx;
+}
+
+.share {
+  position: absolute;
+  width: 38rpx;
+  height: 38rpx;
+  left: 66rpx;
+  bottom: 56rpx;
+  
+}
+
+.shareText {
+  position: absolute;
+  font-size: 11px;
+  color: #989898;
+  left: 59rpx;
+  bottom: 10rpx;
+}
+
+.saveText {
+  position: absolute;
+  font-size: 11px;
+  color: #989898;
+  left: 138rpx;
+  bottom: 10rpx;
+}
+
+.save {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  left: 143rpx;
+  bottom: 48rpx;
+}
+
+.weui-btn {
+  position: absolute;
+  /* background-color: #93c5dd; */
+  width: 67%;
+  bottom: 10rpx;
+  right: 25rpx;
+}

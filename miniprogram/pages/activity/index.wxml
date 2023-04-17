@@ -1,0 +1,63 @@
+<view class="cates">
+	<SearchInput/>
+	<view class="cates_container">
+		<!-- 左侧菜单 -->
+		<scroll-view scroll-y class="left_menu">
+			<view
+			 class="menu_item {{index===currentIndex?'active':''}}"
+			 wx:for="{{leftMenuList}}"
+			 wx:key="*this"
+			 bindtap="handleItemTap"
+			 data-index="{{index}}"
+			>
+				{{item}}
+			</view>
+		</scroll-view>
+		<!-- 右侧商品内容 -->
+
+		<scroll-view scroll-top="{{scrollTop}}" scroll-y class="right_content">
+			<view
+			 class="activity_group"
+			 wx:for="{{rightContent}}"
+			 wx:for-index="index"
+			 wx:key="activity_id"
+			 wx:for-item="item"
+			>
+				<navigator url="/pages/activity_detail/index?_id={{item._id}}">
+					<!-- <i-card
+					 title="{{item.title}}"
+					 extra=""
+					 thumb="{{item.activity_small_logo?item.activity_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"
+					 mode="widthFix"
+					>
+						<view slot="content">主办方：{{item.host}}</view>
+						<view slot="footer">报名时间：{{item.date_range}}</view>
+					</i-card> -->
+          <view class="cu-card">
+        <view class="cu-item bg-img shadow-blur" style="background-image: linear-gradient({{bg_color}});" wx:key="true">
+          <view class="cardTitle">
+          {{item.title}}
+          </view>
+          <view class="cu-list menu-avatar" style="border-radius: 25rpx;">
+          <view class="cu-item">
+            <image class="cu-avatar round lg" src="{{item.images[1]}}"></image>
+            <view class="content flex-sub">
+            <view class="text-grey ">主办方：{{item.host}}</view>
+            <view class="contain" >
+              招募人数：{{item.max_num}}
+              <view >
+              报名时间：{{item.date_range}}
+              </view>
+            </view>
+            </view>
+          </view>
+          </view>
+        </view>
+      </view>
+
+				</navigator>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+

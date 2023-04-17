@@ -1,0 +1,33 @@
+page{
+    height: 100%;
+  }
+  .cates{
+    height: 100%;
+    .cates_container{
+      /* less中使用calc的时候要注意 */
+      height: ~'calc( 100vh - 90rpx )';
+      display: flex;
+      .left_menu{
+        
+        /* 子项 高度 100% flex */
+        flex: 2;
+       
+        .menu_item{
+          border-right: 2rpx,solid,black;
+          height: 80rpx;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30rpx;
+        }
+        .active{
+          color: var(--themeColor);
+          border-left: 5rpx solid currentColor;
+        }
+      }
+      .right_content{
+         /* 子项 高度 100% flex */
+        flex: 6;
+      }
+    }
+  }

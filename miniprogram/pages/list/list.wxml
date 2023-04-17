@@ -1,0 +1,31 @@
+<input class="search_input" placeholder='点我开始搜索' bindinput="navigateToSearch" bindfocus="navigateToSearch"></input>
+<block wx:for="{{stores}}" wx:key="_id">
+  <navigator url="../info/info?id={{item._id}}">
+    <!-- <view class="card">
+      <view class="card_title">{{item.title}}</view>
+      <view class="card_infobar">
+        <view class="card_address">{{item.address}}</view>
+        <view class="card_thumbsup">{{item.thumbs_up}}</view>
+      </view>
+    </view> -->
+    <view class="cu-card article " >
+      <view class="cu-item shadow">
+        <view class="title">
+        <!-- 标题 -->
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.images[0]}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content"> {{item.introduction}}</view>
+            <view style="text-align: left;">
+              <view class="cu-tag bg-red light sm round">地址:{{item.address}}</view>
+              <!-- <view class="cu-tag bg-green light sm round">{{item.tag2}} </view>
+              <view class="cu-tag bg-black light sm round">{{item.time}} </view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</block>

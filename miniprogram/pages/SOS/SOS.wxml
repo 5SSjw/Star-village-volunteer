@@ -1,0 +1,17 @@
+<view class="cu-modal {{modalName=='DialogModal1'?'show':'show'}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">温馨提示</view>
+      <view class="action" bindtap="hideModal">
+      </view>
+    </view>
+    <view class="padding-xl">
+      此功能尚在开发中，敬请期待
+    </view>
+    <view class="cu-bar bg-white justify-center">
+      <view class="action" style="text-align: center;">
+        <button class="cu-btn bg-green " bindtap="fanhui" >返回</button>
+      </view>
+    </view>
+  </view>
+</view>

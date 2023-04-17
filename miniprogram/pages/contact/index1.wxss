@@ -1,0 +1,150 @@
+/* pages/contact/contact.wxss */
+
+page {
+  background-color: #f1f1f1;
+}
+
+.inputRoom {
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #cdcdcd;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+input {
+  width: 70vw;
+  height: 9.33vw;
+  background-color: #fff;
+  border-radius: 40rpx;
+  margin-left: 2vw;
+  padding: 0 3vw;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.leftMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  margin-left: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+.rightMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #93D5DC;
+  margin-right: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+.input_box {
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* padding: 20rpx 30rpx; */
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+  background-color: #ededed;
+}
+
+.input_box1 {
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.img1 {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+
+.input_img {
+  width: 65rpx;
+  height: 65rpx;
+}
+
+.ipt {
+  width: 440rpx;
+  height: 70rpx;
+  background-color: #fff;
+}
+
+.m20 {
+  margin-left: 25rpx;
+}
+
+.bb110 {
+  width: 750rpx;
+  height: 110rpx;
+}
+
+.page2 {
+  width: 750rpx;
+  box-sizing: border-box;
+}
+
+
+
+/* -------------------------------------------- */
+
+.input_box2 {
+  height: 230rpx;
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+}
+
+.emoji {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 10rpx;
+}
+
+/* _____________________________________ */
+
+.featImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 15rpx;
+}
+
+.featTitle {
+  font-size: 30rpx;
+  color: #8b8b8b;
+}
+
+.feat1 {
+  width: 100rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35rpx;
+}

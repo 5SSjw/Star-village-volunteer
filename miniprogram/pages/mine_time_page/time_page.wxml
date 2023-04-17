@@ -1,0 +1,32 @@
+<!--pages/time_page/time_page.wxml-->
+<view class="white_block">
+  <view class="info">
+    <view>
+      <image class="grade_touxiang" src="{{faceIMG}}"></image>
+    </view>
+    <view class="grade_nicheng">{{nickName}}</view>
+  </view>
+  <view style="text-align: center;">
+    <text class="timeLenColor">{{timeLen+'  '}}</text>
+    <text class="bigFont">小时</text>
+  </view>
+</view>
+
+<view class="white_block" style="margin-top: 30rpx; font-size: 40rpx;">您参加过下列活动：</view>
+
+<view wx:for="{{swiperList}}" wx:key="index">
+  <view class="list">
+    <view class="list-img">
+      <image src="{{item.url}}"></image>
+    </view>
+    <view class="list-info">
+      <view class="title">{{item.name}}</view>
+      <view class="info">{{item.info_detail}}</view>
+      <view class="info-bottom">
+        <text class="price">+ {{item.hour}}小时</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="end">下面没有了</view>

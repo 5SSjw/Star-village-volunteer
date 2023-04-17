@@ -1,0 +1,94 @@
+<form report-submit='true' onsubmit="createItem">
+  <view class="cu-form-group margin-top">
+    <view class='title'>位置设定</view>
+    <button bindtap='chooseLocation'  class="cu-btn bg-red margin-tb-sm lg">地图选址</button>
+  </view>
+  <!-- <view class="loactionGroup">
+    <button bindtap='chooseLocation' type='primary'>地图选址</button>
+  </view> -->
+  
+  <!-- <view class="padding flex flex-direction">
+    <button bindtap='chooseLocation'  class="cu-btn bg-red margin-tb-sm lg">地图选址</button>
+  </view> -->
+  <view class="cu-form-group margin-top">
+    <view class='title'>活动名称:</view>
+    <input  name="title" value='{{title}}'></input>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>地址设定:</view>
+    <input  name="address" value='{{address}}'></input>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>负责人电话:</view>
+    <input  name="contact" value='{{phone}}'></input>
+  </view>
+  <view class="cu-form-group margin-top">
+    <view class='title'>主办方:</view>
+    <input  name="host"  value='{{host}}'></input>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>志愿时长:</view>
+    <input  name="hours" type="number" value='{{hours}}'></input>
+  </view>
+  
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>总人数:</view>
+    <input  name="max_num" type="number" value='{{max_num}}'></input>
+  </view>
+
+  <!-- <view class="cu-form-group margin-top">
+    <view class='title'>活动类型</view>
+    <input name="type" type="number" value='{{type}}'></input>
+  </view> -->
+  <view class="cu-form-group margin-top">
+    <view class='title'>活动类型:</view>
+    <picker name="type" bindchange="PickerChange" value="{{type}}" range="{{picker}}">
+			<view class="picker">
+				{{type?picker[type]:'未选择'}}
+			</view>
+		</picker>
+  </view>
+  
+  <view class="cu-form-group margin-top">
+    <view class='title'>志愿者保障:</view>
+    <input name="safeguard" value='{{safeguard}}'></input>
+  </view>
+  
+  <view class="cu-form-group margin-top">
+    <view class='title'>服务对象:</view>
+    <input name="service_object" value='{{service_object}}'></input>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>举办日期:</view>
+    <input  name="ddl" value='{{ddl}}'></input>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>报名时间:</view>
+    <input  name="date_range" value='{{date_range}}'></input>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class='title'>报名方式:</view>
+    <input  name="sign_in" value='{{sign_in}}'></input>
+  </view>
+  
+
+  <view class="cu-form-group margin-top">
+    <view class="title">活动介绍:</view>
+    <textarea placeholder="多行文本输入框" name="introduction" value="{{introduction}}" class="border"></textarea>
+  </view>
+·
+
+  <!-- <view class='desc'>评分（10分制）</view>
+  <slider min="1" max="10" show-value name="star" value="5"></slider> -->
+  <view class="padding flex flex-direction">
+   <button bindtap='uploadImage' class="cu-btn bg-red margin-tb-sm lg">点我选择宣传照片</button>
+  </view>
+  <button class='submit' type="primary" form-type='submit'>创建</button>
+</form>

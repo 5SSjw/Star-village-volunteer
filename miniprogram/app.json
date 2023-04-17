@@ -1,0 +1,126 @@
+{
+  "pages": [
+    "pages/auth/auth",
+    "pages/index/index",
+    "pages/discover/index",
+    "pages/message/index",
+    "pages/message1/index",
+    "pages/contact/index",
+    "pages/contact1/index1",
+    "pages/activity/index",
+    "pages/activity_detail/index",
+    "pages/rank/index",
+    "pages/epidemic/index",
+    "pages/oil-detail/oil-detail",
+    "pages/mine_grade_page/grade_page",
+    "pages/mine_score_page/score_page",
+    "pages/mine_time_page/time_page",
+    "pages/mine_prize_page/prize_page",
+    "pages/mine_focus_page/focus_page",
+    "pages/mine_collection_page/collection_page",
+    "pages/search/search",
+    "pages/add/add",
+    "pages/community/community",
+    "pages/info/info",
+    "pages/list/list",
+    "pages/invite/index",
+    "pages/logs/logs",
+    "pages/map/map",
+    "pages/mine/index",
+    "pages/share/share",
+    "pages/epidemic_detail/index",
+    "invite/index",
+    "pages/mine_about_page/index",
+    "pages/qiandao/qiandao",
+    "pages/fabu_choose/fabu_choose",
+    "pages/signin/index",
+    "pages/footprints/footprints",
+    "pages/signin/success/success",
+    "pages/zixun/zixun",
+    "pages/zixun_detail/zixun_detail",
+    "pages/safe_guide/safe_guide",
+    "pages/zixun_add/zixun_add",
+    "pages/SOS/SOS",
+    "pages/ShareSignIn/ShareSignIn",
+    "pages/epidemic_detail/index1",
+    "pages/epidemic_detail/index2",
+    "pages/phone/phone",
+    "pages/firstaid/firstaid",
+    "firstaid_content/heimlich/heimlich",
+    "firstaid_content/CPR/CPR",
+    "firstaid_content/spirophore/spirophore",
+    "firstaid_content/hypoglycemi/hypoglycemi",
+    "firstaid_content/allergy/allergy",
+    "firstaid_content/Nasal/Nasal",
+    "firstaid_content/haematemesis/haematemesis",
+    "firstaid_content/asthma/asthma",
+    "firstaid_content/chestpain/chestpain",
+    "firstaid_content/bee/bee",
+    "firstaid_content/snake/snake",
+    "firstaid_content/dog/dog",
+    "firstaid_content/scorpion/scorpion",
+    "firstaid_content/bleeding/bleeding",
+    "firstaid_content/cramp/cramp",
+    "firstaid_content/heatstroke/heatstroke",
+    "firstaid_content/drowning/drowning",
+    "firstaid_content/sunburn/sunburn",
+    "firstaid_content/eelectric/eelectric"
+
+  ],
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffd000",
+    "navigationBarTitleText": "星村志愿小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ffd000",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icons/index.png",
+        "selectedIconPath": "./icons/index-o.png"
+      },
+      {
+        "pagePath": "pages/zixun/zixun",
+        "text": "资讯",
+        "iconPath": "./icons/community.png",
+        "selectedIconPath": "./icons/community-o.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "发现",
+        "iconPath": "./icons/discover.png",
+        "selectedIconPath": "./icons/discover-o.png"
+      },
+      {
+        "pagePath": "pages/message1/index",
+        "text": "消息",
+        "iconPath": "./icons/message.png",
+        "selectedIconPath": "./icons/message-o.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "./icons/my.png",
+        "selectedIconPath": "./icons/my-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

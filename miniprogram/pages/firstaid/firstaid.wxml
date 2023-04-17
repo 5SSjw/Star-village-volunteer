@@ -1,0 +1,60 @@
+<!--pages/phone/phone.wxml-->
+<!-- 页面根 -->
+<scroll-view scroll-y class="scrollPage">
+<view class="imagesize">
+  <image src='https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/hn(11).png?sign=8d29599bc476c7ccd88654ea7712f730&t=1661252964' mode='widthFix' class='png' style='width:90%'></image>
+</view>
+<!-- <view class="title">
+  <text>常用急救方法</text>
+</view> -->
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none' url="/firstaid_content/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" 
+    wx:for="{{element1}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+  </navigator> 
+</view>
+<view class="imagesize">
+  <image src='https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/hn(10).png?sign=61489ef5513802a50fa8bd9ad7e8f267&t=1661252923' mode='widthFix' class='png' style='width:90%'></image>
+</view>
+<!-- <view class="title">
+  <text>突发急症</text>
+</view> -->
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none' url="/firstaid_content/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" 
+    wx:for="{{element2}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+  </navigator> 
+</view>
+<view class="imagesize">
+  <image src='https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/hn(9).png?sign=3ef5bdbf81f1d0efbe49f860aeff8f08&t=1661252887' mode='widthFix' class='png' style='width:90%'></image>
+</view>
+<!-- <view class="title">
+  <text>动物咬伤</text>
+</view> -->
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none' url="/firstaid_content/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" 
+    wx:for="{{element3}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+  </navigator> 
+</view>
+<view class="imagesize">
+  <image src='https://636c-cloud1-2gdhip8y9d4f0c42-1311633996.tcb.qcloud.la/hn(12).png?sign=d4e169e659fae91e439d927c6b5d1eab&t=1661252980' mode='widthFix' class='png' style='width:90%'></image>
+</view>
+<!-- <view class="title">
+  <text>户外急救</text>
+</view> -->
+<view class='nav-list'>
+  <navigator open-type="navigate" hover-class='none' url="/firstaid_content/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" 
+    wx:for="{{element4}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+  </navigator> 
+</view>
+</scroll-view>

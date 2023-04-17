@@ -1,0 +1,92 @@
+<view class="container">
+	<view class="adver">
+		<image style="position: relative; left: 0rpx; top: 5rpx"  src="{{store.images[0]}}" class="img-ad" />
+        	<!-- 轮播图 开始 -->
+	<!-- 轮播图 结束 -->
+        <!-- <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+            <block wx:for="{{store.images}}">
+                <swiper-item>
+                <image src="{{item}}" data-url="{{item}}" class="slide-image" mode="aspectFit" bindtap="tapImage" />
+                </swiper-item>
+            </block>
+        </swiper>        -->
+        
+		<view class="botany-name">
+			<view class="flower-name">{{store.title}}</view>
+			<!--<view class="flower-englist-name">FLORAI</view>-->
+		</view>
+	</view>
+	<view class="introduce">
+		<view class="introduce-title">
+			活动详情
+		</view>
+		<view class="introduce-content solid-bottom">
+			{{store.introduction}}
+		</view>
+		<view class="list-infor d-row j-start solid-bottom">
+			<view class="nav-01">
+				<view class="list-02">主办方</view>
+				<view class="bold-txt">{{store.host}}</view>
+			</view>
+			<view class="nav-01">
+				<view class="list-02">活动时间</view>
+				<view class="bold-txt">{{store.ddl}}</view>
+			</view>
+		</view>
+		<view class="list-infor d-row j-start solid-bottom">
+			<view class="nav-01">
+				<view class="list-02">活动地点 </view>
+				<view class="bold-txt">{{store.address}}</view>
+			</view>
+			<view class="nav-01">
+				<view class="list-02">招募人数</view>
+				<view class="bold-txt">{{store.max_num}}</view>
+			</view>
+		</view>
+		<view class="list-infor d-row j-start solid-bottom">
+			<view class="nav-01">
+				<view class="list-02">活动时间 </view>
+				<view class="bold-txt">{{store.date_range}}</view>
+			</view>
+			<view class="nav-01">
+				<view class="list-02">志愿时长</view>
+				<view class="bold-txt">{{store.hours}}小时</view>
+			</view>
+		</view>
+		<view class="list-infor d-row j-start solid-bottom">
+			<view class="nav-01">
+				<view class="list-02">服务对象 </view>
+				<view class="bold-txt">{{store.service_object}}</view>
+			</view>
+			<view class="nav-01">
+				<view class="list-02">志愿者保障</view>
+				<view class="bold-txt">{{store.safeguard}}</view>
+			</view>
+		</view>
+		<view class="list-infor d-row j-start solid-bottom">
+			<view class="nav-01">
+				<view class="list-02">报名方式 </view>
+				<view class="bold-txt">{{store.sign_in}}</view>
+			</view>
+		</view>
+
+	</view>
+	<view class="footer">
+		<text class="support">最终解释权归主办方所有</text>
+	</view>
+	<view class="posControl">
+		<view class="footBar">
+			<image class="share" src="https://636c-cloud1-4gem7fr950020315-1311023162.tcb.qcloud.la/share.png?sign=92787cd7a201424705db4af7fceeab1c&t=1651464504" style="position: absolute; left: 65rpx;"/>
+			<text class="shareText" style="position: absolute; left: 62rpx; top: 60rpx">分享</text>
+      <text class="cuIcon-favorfill lg text-gray" style="font-size: 40rpx; display: block; box-sizing: border-box; left: 150rpx; top: 6rpx; position: absolute" bindtap="haveSave"></text>
+			<!-- <image style="width: 44rpx; height: 38rpx; display: block; box-sizing: border-box; left: 140rpx; top: 12rpx; position: absolute"  class="save " src="{{isClick?'https://636c-cloud1-4gem7fr950020315-1311023162.tcb.qcloud.la/save-s.png?sign=d2ae7f44772b0891784be4d616a3477a&t=1651464535':'https://636c-cloud1-4gem7fr950020315-1311023162.tcb.qcloud.la/save.png?sign=4d26f4a70dedc7ca87d828611c7163de&t=1651464551'}}" bindtap="haveSave" /> -->
+			<text class="saveText" style="position: absolute; left: 145rpx;">{{isClick?'已收藏':'收藏'}}</text>
+      <text class="cuIcon-profile lg text-gray" bindtap='deliver' style="position: absolute; left: 230rpx; top: 6rpx; font-size: 40rpx;"></text>
+      <text class="saveText" style="position: absolute; left: 227rpx;">客服</text>
+			<!-- <button class="weui-btn" type="primary" bindtap='deliver' style="position: absolute; left: 361rpx; top: 25rpx">咨询负责人</button> -->
+      <view class="navigateBox">
+        <button class='cu-btn round line-yellow button-hover' bindtap='navigate' style="position: fixed; right: 2%; bottom: 20rpx;">导航</button>
+      </view>
+		</view>
+	</view>
+</view>

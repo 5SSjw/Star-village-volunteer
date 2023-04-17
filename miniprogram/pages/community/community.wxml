@@ -1,0 +1,117 @@
+<!-- colurUI -->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':'show'}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">温馨提示:社区功能关闭</view>
+      <view class="action" bindtap="hideModal">
+      </view>
+    </view>
+    <view class="padding-xl">
+      因小程序为个人开发，本功能需注册公司，故因上线需要，本功能暂停使用。
+    </view>
+    <view class="cu-bar bg-white justify-center">
+      <view class="action" style="text-align: center;">
+        <button class="cu-btn bg-green " bindtap="fanhui" >返回</button>
+      </view>
+    </view>
+  </view>
+</view>
+<block wx:for="{{actionsList}}" wx:key="index">
+<view class="cu-card dynamic ">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{item.faceIMG}});"></view>
+        <view class="content flex-sub">
+          <view>{{item.nickName}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{item.time}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{item.text}}
+    </view>
+    <!-- <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+      <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+      </view>
+    </view> -->
+    <view class="images-wrap">
+      <block wx:if="{{item.images.length == 1}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+        <!-- 单图布局 -->
+        <image src="{{imgItem}}" class="image-1"></image>
+      </block>
+
+      <block wx:if="{{item.images.length == 2||item.images.length == 3}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+      <!-- 2-3张图布局 -->
+        <image src="{{imgItem}}" class="image-2-3"></image>
+      </block>
+
+      <block wx:if="{{item.images.length == 4}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+      <!-- 四图布局 -->
+        <image src="{{imgItem}}" class="image-4"></image>
+      </block>
+      <block wx:if="{{item.images.length > 4}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+      <!-- 5-9图布局 -->
+        <image src="{{imgItem}}" class="image-5-9"></image>
+      </block>
+    </view>
+
+
+    <!-- <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+      <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+    </view> -->
+
+    <view class="hudong-box">
+      <button open-type="share" size="mini" class="share-button">
+        <view class="hudong-cell">
+          <image src="../imgs/share.png" class="hudong-img"></image>
+          <view class="share-text">分享</view>
+        </view>
+      </button>
+      <view class="hudong-cell">
+        <image src="../imgs/comment.png" class="hudong-img"></image>
+        <view class="share-text">评论</view>
+      </view>
+      <view class="hudong-cell">
+        <image src="../imgs/like.png" class="hudong-img"></image>
+        <view class="share-text">点赞</view>
+      </view>
+    </view>
+    <!-- 评论 -->
+    <!-- <view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item">
+        <view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+        <view class="content">
+          <view class="text-grey">王汉彬</view>
+          <view class="text-gray text-content text-df">
+            界面美化ing
+          </view>
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view>熊猫：</view>
+              <view class="flex-sub">你美化好了吗?</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</view>
+</block>
+
+
+
+
+
+
+<!-- 悬浮添加按钮 -->
+<view bindtap='adddetial'>
+  <image class="add_icon" src="../imgs/fabu.png" bindtap="fabiao"></image>
+</view>
+
+
+

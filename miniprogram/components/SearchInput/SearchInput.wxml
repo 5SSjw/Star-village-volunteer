@@ -1,0 +1,4 @@
+<view class="search_input">
+	<navigator url="/pages/search/search" open-type="navigate"> 搜索活动</navigator>
+</view>
+

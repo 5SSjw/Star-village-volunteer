@@ -1,0 +1,109 @@
+<!-- tabs -->
+<view class="top-tab flex-wrp flex-tab">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+    <!-- <block wx:for="{{with_list}}" wx:key="index">
+      <view class="tabs" data-data="{{item}}" data-name="{{item._openid == openId ? item.Aname:item.Bname}}" bindtap="toWith">
+        <image class="img" wx:if="{{openId == item.userA}}" src="{{item.BavatarUrl}}"></image>
+		<image class="img" wx:if="{{openId == item.userB}}" src="{{item.AavatarUrl}}"></image>
+        <view class="tab_l">
+            <view class="tabs_l2">
+                <view class="user_f" wx:if="{{openId == item.userA}}">{{item.Bname}}</view>
+				<view class="user_f" wx:if="{{openId == item.userB}}">{{item.Aname}}</view>
+                <view class="user_msg">[动画表情]</view>
+            </view>
+            <view class="tab_r">
+                <view class="time1">下午8:13</view>
+            </view>
+        </view>
+      </view>
+    </block> -->
+
+    <view class="tabs" data-name="系统通知" >
+        <image class="img" src="../../images/notice.png"></image>
+        <view class="tab_l">
+          <view class="tabs_l2">
+            <view class="user_f">系统通知</view>
+            <view class="user_msg">欢迎加入小程序~</view>
+          </view>
+          <view class="tab_r">
+            <view class="time1">上午9:20</view>
+          </view>
+        </view>
+    </view>   
+    <view class="tabs" data-name="系统通知" >
+        <image class="img" src="../../images/anquan.png"></image>
+        <view class="tab_l">
+          <view class="tabs_l2">
+            <view class="user_f">安全通知</view>
+            <view class="user_msg">参与志愿活动时请注意安全！~</view>
+          </view>
+          <view class="tab_r">
+            <view class="time1">下午3:20</view>
+          </view>
+        </view>
+    </view>   
+
+  </view>  
+  <view class="ctnt0" hidden="{{currentNavtab==1 ? '' : true}}">
+              <view class="cu-modal {{modalName=='DialogModal1'?'show':'show'}}">
+            <view class="cu-dialog">
+              <view class="cu-bar bg-white justify-end">
+                <view class="content">温馨提示:聊天功能关闭</view>
+                <view class="action" bindtap="hideModal">
+                </view>
+              </view>
+              <view class="padding-xl">
+                因小程序为个人开发，本功能需注册公司，故因上线需要，本功能暂停使用。
+              </view>
+              <view class="cu-bar bg-white justify-center">
+                <view class="action" style="text-align: center;">
+                  <button class="cu-btn bg-green " bindtap="chakantongzhi" >回到主页</button>
+                </view>
+              </view>
+            </view>
+          </view>
+    <block wx:for="{{with_list}}" wx:key="index">
+      <view class="tabs" data-data="{{item}}" data-name="{{item._openid == openId ? item.Aname:item.Bname}}" bindtap="toWith">
+        <image class="img" wx:if="{{openId == item.userA}}" src="{{item.BavatarUrl}}"></image>
+		<image class="img" wx:if="{{openId == item.userB}}" src="{{item.AavatarUrl}}"></image>
+        <view class="tab_l">
+            <view class="tabs_l2">
+                <view class="user_f" wx:if="{{openId == item.userA}}">{{item.Bname}}</view>
+				<view class="user_f" wx:if="{{openId == item.userB}}">{{item.Aname}}</view>
+                <view class="user_msg">测试</view>
+            </view>
+            <view class="tab_r">
+                <view class="time1">下午8:13</view>
+            </view>
+        </view>
+        <!-- <image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" class="gif-wave"></image> -->
+      </view>
+    </block>
+
+  </view>
+
+
+</scroll-view>
+
+<!-- <block wx:for="{{with_list}}" wx:key="index">
+	<view class="tabs" data-data="{{item}}" data-name="{{item._openid == userInfo.openId ? item.Aname:item.Bname}}" bindtap="toWith">
+		<image class="img" wx:if="{{userInfo.openId == item.userA}}" src="{{item.BavatarUrl}}"></image>
+		<image class="img" wx:if="{{userInfo.openId == item.userB}}" src="{{item.AavatarUrl}}"></image>
+
+		<view class="tab_l">
+			<view class="tabs_l2">
+				<view class="user_f" wx:if="{{userInfo.openId == item.userA}}">{{item.Bname}}</view>
+				<view class="user_f" wx:if="{{userInfo.openId == item.userB}}">{{item.Aname}}</view>
+				<view class="user_msg">[动画表情]</view>
+			</view>
+			<view class="tab_r">
+				<view class="time1">下午8:13</view>
+			</view>
+		</view>
+	</view>
+</block>  -->

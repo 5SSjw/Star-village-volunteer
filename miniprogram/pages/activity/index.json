@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "SearchInput":"../../components/SearchInput/SearchInput",
+          "i-card": "../../dist/card/index",
+          "i-load-more": "../../dist/load-more/index",
+          "Tabs":"../../components/Tabs/Tabs"
+      },
+      "navigationBarTitleText": "活动项目"
+}

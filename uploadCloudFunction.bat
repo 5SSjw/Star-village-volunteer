@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-2gdhip8y9d4f0c42 --n quickstartFunctions --r --project "D:\微信web开发者工具\project\振兴乡村" --report_first --report

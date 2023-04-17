@@ -1,0 +1,225 @@
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+.cates .cates_container {
+  /* less中使用calc的时候要注意 */
+  height: calc( 100vh - 90rpx );
+  display: flex;
+}
+.cates .cates_container .left_menu {
+  /* 子项 高度 100% flex */
+  flex: 2;
+}
+.cates .cates_container .left_menu .menu_item {
+  border-right: 2rpx,solid,black;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.cates .cates_container .left_menu .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.cates .cates_container .right_content {
+  /* 子项 高度 100% flex */
+  flex: 6;
+}
+
+
+.cu-card {
+  display: block;
+  overflow: hidden;
+}
+
+.cu-list.menu-avatar {
+  overflow: hidden;
+}
+
+.cu-list.menu-avatar>.cu-item {
+  position: relative;
+  display: flex;
+  padding-right: 10rpx;
+  height: 140rpx;
+  background-color: white;
+  justify-content: flex-end;
+  align-items: center
+}
+
+.cu-card>.cu-item.shadow-blur {
+  overflow: initial;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cu-list.menu-avatar>.cu-item .content.flex-sub {
+  width: calc(100% - 96rpx - 60rpx - 20rpx);
+}
+
+.cu-list.menu-avatar>.cu-item>.cu-avatar {
+  position: absolute;
+  left: 30rpx
+}
+
+
+cu-list+.cu-list {
+  margin-top: 30rpx
+}
+
+.cu-list.menu-avatar {
+  overflow: hidden;
+}
+
+.cu-list>.cu-item {
+  transition: all .6s ease-in-out 0s;
+  transform: translateX(0rpx)
+}
+
+
+.cu-avatar {
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  color: var(--white);
+  white-space: nowrap;
+  position: relative;
+  width: 64rpx;
+  height: 64rpx;
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+.round {
+  border-radius: 5000rpx;
+}
+
+.cu-avatar.lg {
+  width: 108rpx;
+  height: 108rpx;
+  font-size: 2em;
+}
+
+.cu-list.menu-avatar>.cu-item .content {
+  position: absolute;
+  left: 146rpx;
+  width: calc(100% - 96rpx - 60rpx - 120rpx - 20rpx);
+  line-height: 1.6em;
+}
+
+.cu-list.menu-avatar>.cu-item .content.flex-sub {
+  width: calc(100% - 96rpx - 60rpx - 20rpx);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.cu-card>.cu-item {
+  display: block;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 25rpx;
+  /* height: 450rpx; */
+  margin: 30rpx;
+}
+
+.cardTitle {
+  color: #fff;
+  padding: 40rpx 60rpx;
+  font-size: 40rpx;
+  font-weight: 450;
+  transform: skew(-10deg, 0deg);
+  position: relative;
+  text-shadow: 0px 0px 6rpx rgba(0, 0, 0, 0.3)
+}
+
+/* .cardTitle::before {
+  content: "";
+  position: absolute;
+  width: 60rpx;
+  height: 6rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  display: block;
+  top: 60rpx;
+  left: 50rpx;
+  transform: skew(10deg, 0deg);
+} */
+
+.cardTitle::after {
+  content: "";
+  position: absolute;
+  width: 140rpx;
+  border-radius: 6rpx;
+  height: 24rpx;
+  background-color: #fff;
+  display: block;
+  bottom: 76rpx;
+  left: 90rpx;
+  transform: skew(10deg, 0deg);
+  opacity: 0.1;
+}
+
+.shadow-blur {
+  position: relative;
+}
+
+.shadow-blur::before {
+  content: "";
+  display: block;
+  background: inherit;
+  filter: blur(10rpx);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10rpx;
+  left: 10rpx;
+  z-index: -1;
+  opacity: 0.4;
+  transform-origin: 0 0;
+  border-radius: inherit;
+  transform: scale(1, 1);
+}
+
+.text-grey {
+  color: #8799a3;
+}
+
+.text-sm {
+  font-size: 24rpx;
+}
+
+.text-gray {
+  color: #aaaaaa;
+}
+.contain{
+  font-size: 24rpx;
+  color: #aaaaaa;
+}
+
+.suojin{
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+

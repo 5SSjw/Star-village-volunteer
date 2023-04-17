@@ -1,0 +1,43 @@
+<!--ranklist.wxml-->
+<view class="container">
+	<view class="header">
+		<text class='text1' bindtap='moveTabR'>时长榜</text>
+		<text class='text2' bindtap='moveTabL'>积分榜</text>
+		<view class='bg {{tabPosition}}' />
+	</view>
+	<scroll-view class="list" scroll-y bindscrolltolower="{{hasReachBottom}}">
+		<view wx:for="{{userList}}" wx:key="item" wx:for-index="index">
+			<view class="item">
+				<text class="index">{{index+1}}</text>
+				<image class="avatar" src="{{item.imageurl}}" />
+				<view class="left">
+					<!-- <text wx:if="{{item.gender==0}}" class="male">♂</text>
+					<text wx:elif="{{item.gender==1}}" class="female">♀</text> -->
+					<!-- <text wx:else class="unknow">ET</text> -->
+					<text class="nickname" style="margin-left: 15px;">{{item.nickname}}</text>
+					<!-- <text wx:if="{{item.city!=''}}" class="city">来自：{{item.city}}</text>
+					<text wx:else class="city">来自：外星</text> -->
+				</view>
+				<view class="right">
+					<text class="solve">{{tabPosition=='transformL'?'获得 '+item.integral+' 积分':'完成 '+item.hours+' 小时'}}</text>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+
+	<view class="list">
+		<view class="me">
+			<text class="index">Lv:{{userInfo.rank}}</text>
+			<image class="avatar" src="{{userInfo.imageurl==undefined?'这是一张图片的url':userInfo.imageurl}}" />
+			<view class="left">
+
+				<text class="nickname">{{userInfo.nickname==undefined?'未授权用户':userInfo.nickname}}</text>
+			</view>
+			<view class="right">
+				<text wx:if="{{userInfo.hours!=undefined&&userInfo.integral!=undefined}}" class="solve">{{tabPosition=='transformL'?'获得 '+userInfo.integral+' 积分':'完成 '+userInfo.hours+'小时'}}</text>
+				<text wx:else class="solve">{{tabPosition=='transformL'?'获得 0 积分':'完成 0小时'}}</text>
+			</view>
+		</view>
+	</view>
+</view>
+

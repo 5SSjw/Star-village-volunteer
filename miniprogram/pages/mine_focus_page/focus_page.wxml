@@ -1,0 +1,17 @@
+<!--pages/mine_focus_page/focus_page.wxml-->
+
+<view class="box transition" wx:if="{{friends.length}}">
+  <view class="title">我的关注</view>
+  <view class="user-panel" wx:for="{{friends}}" wx:key="index">
+    <image class="head" src="{{item.img}}"></image>
+    <view class="center">
+      <view class="name">
+        <text class="name-text">{{item.name}}</text>
+        <i class="iconfont {{item.gender ? 'nan' : 'nv'}}"></i>
+      </view>
+      <view class="code">发帖 {{item.post}} 粉丝 {{item.fans}}</view>
+    </view>
+    <view class="follow {{item.doFocus ? 'follows' : ''}}" data-index =
+    '{{index}}' bindtap="changeState">{{item.doFocus ? "已关注" : "关注"}}</view>
+  </view>
+</view>

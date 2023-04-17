@@ -1,0 +1,34 @@
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getInfo">授权登陆</button> -->
+<!-- <button bindtap="getInfo">授权登陆</button> -->
+<view class="container">
+<view class="jianju"> </view>
+	<!--
+	<view class='header'>
+		<image src='../imgs/zhiyuanzhe.png' />
+	</view>
+	<image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="widthFix" class="gif-wave" />
+	<view class='content'>
+		<view>申请获取以下权限</view>
+		<text>获得你的公开信息(昵称，头像等)</text>
+	</view>
+-->
+	<!-- <button class='bottom' lang="zh_CN" bindtap="getInfo">
+		授权登录
+	</button> -->
+  <!-- <view style="display: flex; flex-direction: row;"> -->
+    <button class="weui-btn" type="primary" bindtap='getInfo' style="border-radius: 50rpx; background-color: #ffd000;color: black; bottom: 100rpx;">授权登录</button>
+  <navigator open-type="exit" target="miniProgram">
+  	<!-- <button class="bottom" lang="zh_CN"  >
+		拒绝登录
+	</button> -->
+  <button class="weui-btn" type="primary" style="border-radius: 50rpx; background-color: #ffd000;color: black;bottom: 60rpx;">拒绝登录</button>
+  </navigator>
+
+  <!-- <button class="weui-btn" lang="zh_CN" bindtap="getInfo">
+		授权登录
+	</button> -->
+  
+
+<!-- </view> -->
+</view>
+

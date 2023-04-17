@@ -1,0 +1,160 @@
+page {
+    background-color: #ededed;
+    padding: 20rpx 0;
+    box-sizing: border-box;
+  }
+  
+  .info_box {
+    width: 750rpx;
+    min-height: 100rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    margin-bottom: 15rpx;
+    
+  }
+  
+  .headImg {
+    width: 90rpx;
+    height: 90rpx;
+    margin-right: 30rpx;
+    border-radius: 10rpx;
+  }
+  
+  .info_title {
+    max-width: 600rpx;
+    min-height: 80rpx;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+  
+  }
+  .wt {
+    background-color: #fff;
+  }
+  .gr {
+    background-color: #ffd000;
+  }
+  
+  .info_box2 {
+    width: 750rpx;
+    min-height: 100rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    margin-bottom: 15rpx;
+  }
+  
+  .headImg2 {
+    width: 90rpx;
+    height: 90rpx;
+    margin-left: 30rpx;
+    border-radius: 10rpx;
+  }
+  
+  
+  /* --------------------------------------------- */
+  
+  .input_box {
+    width: 750rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* padding: 20rpx 30rpx; */
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    background-color: #ededed;
+  }
+  
+  .input_box1 {
+    height: 110rpx;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  
+  .img1 {
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+  }
+  
+  .input_img {
+    width: 65rpx;
+    height: 65rpx;
+  }
+  
+  .ipt {
+    width: 440rpx;
+    height: 70rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+  }
+  
+  .m20 {
+    margin-left: 25rpx;
+  }
+  
+  .bb110 {
+    width: 750rpx;
+    height: 110rpx;
+  }
+  
+  .page2 {
+    width: 750rpx;
+    box-sizing: border-box;
+  }
+  
+  .iphoneX {
+    width: 750rpx;
+    padding-bottom: 30rpx !important;
+  }
+  
+  /* -------------------------------------------- */
+  
+  .input_box2 {
+    height: 250rpx;
+    display: flex;
+    padding: 20rpx;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  
+  }
+  
+  .emoji {
+    width: 70rpx;
+    height: 70rpx;
+    margin: 0 10rpx;
+  }
+  
+  /* _____________________________________ */
+  
+  .featImg {
+    width: 120rpx;
+    height: 120rpx;
+  }
+  
+  .featTitle {
+    font-size: 30rpx;
+    color: #464646;
+  }
+  
+  .feat1 {
+    width: 120rpx;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35rpx;
+  }

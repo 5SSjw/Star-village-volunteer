@@ -1,0 +1,32 @@
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getInfo">授权登陆</button> -->
+<!-- <button bindtap="getInfo">授权登陆</button> -->
+<view class="container">
+	<view class="jianju" />
+	<!-- <view class="v1" style="height:{{clientHeight?clientHeight+'px':'auto'}}"> -->
+
+		<!-- v2父容器  子view使用绝对布局 -->
+		<view class="v2">
+			<view class="dltext" style="width: 232rpx; height: 92rpx; display: block; box-sizing: border-box; left: 0rpx; top: -2rpx">邀请码</view>
+
+			<!-- 邀请码 -->
+			<view class="phoneCs">
+				<input placeholder="请输入邀请码" type="number" bindinput="content" />
+			</view>
+			<!-- 登录按钮 -->
+			<view class="denglu">
+				<button class="btn-dl" type="primary" bindtap="goadmin">验证</button>
+			</view>
+		</view>
+	<!-- </view> -->
+
+	<!-- <form bindsubmit='loginForm' class="invite">
+  
+  <input type='text' name='invitationcode' placeholder="请输入邀请码"></input>
+  
+  <view class='ligin-button'>
+   邀请码： <button formType="submit" type='primary'>点击提交</button>
+  </view>
+</form> -->
+
+</view>
+

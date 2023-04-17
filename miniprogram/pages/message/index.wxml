@@ -1,0 +1,80 @@
+<!--logs.wxml-->
+<view class="top-tab flex-wrp flex-tab">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container notify withtab" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+
+  <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+
+    <view class="unread">
+      <text>0 条未读</text>
+      <image src="../../images/allread.png"></image>
+    </view>
+
+    <view class="notify-item flex-wrp"bindtap="toSay">
+      <view class="avatar flex-item">
+        <image src="../../images/xiaozhixie.png"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">东北大学志愿者协会</text>
+        <text class="notify-title">本次活动的时间在5月13日上午8时哦</text>
+      </view>
+      <view class='time'>
+          <view class='time-num'>13:36</view>
+      </view>
+    </view>
+
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/yuanzhixie.png"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">东北大学软件学院志愿者协会</text>
+        <text class="notify-title">5月5日下午三点开始</text>
+      </view>
+      <view class='time'>
+          <view class='time-num'>05-01</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="ctnt0" hidden="{{currentNavtab==1 ? '' : true}}">
+    <view class="unread">
+      <text>0 条未读</text>
+      <image src="../../images/allread.png"></image>
+    </view>
+
+    <view class="notify-item flex-wrp"bindtap="toSay1">
+      <view class="avatar flex-item">
+        <image src="../../images/touxiang1.png"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">熊猫街</text>
+        <text class="notify-title">到时候我们一起去</text>
+      </view>
+      <view class='time'>
+          <view class='time-num'>15:13</view>
+      </view>
+    </view>
+
+    <view class="notify-item flex-wrp">
+      <view class="avatar flex-item">
+        <image src="../../images/touxiang2.png"></image>
+      </view>
+      <view class="notify-content flex-item">
+        <text class="notify-source">藏锋守拙</text>
+        <text class="notify-title">好的</text>
+      </view>
+      <view class='time'>
+          <view class='time-num'>14:01</view>
+      </view>
+    </view>
+
+  </view>
+
+
+</scroll-view>

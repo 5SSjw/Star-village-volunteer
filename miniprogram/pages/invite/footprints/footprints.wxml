@@ -1,0 +1,56 @@
+<!--miniprogram/pages/footprints/footprints.wxml-->
+<view class="page" wx:if="{{ !view }}">
+  <view class="page__hd">
+    <view class="page__title">历史足迹</view>
+    <!-- <view class="page__desc">表单预览</view> -->
+    <view class="page__desc">
+      <!-- <button class="weui-btn mini-btn" type="default" size="mini" bindtap='changeView'>在{{ view ? "列表中": "地图上" }}查看</button> -->
+      <button class="weui-btn mini-btn" type="primary" size="mini" bindtap='changeView' style='padding-left: 14px; padding-right: 14px; background-color: #ffd000;'>在地图上查看</button>
+    </view>
+  </view>
+
+  <view class="page__bd">
+
+    <view wx:if="{{ !queryResult.length }}" style='margin: 25px 15px;'>您暂时还没有打卡记录哦，赶紧去打卡吧！</view>
+    <view class="weui-form-preview" wx:for="{{ queryResult }}" wx:key="">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">足迹{{ index + 1 }}</view>
+          <view class="weui-form-preview__value_in-hd">{{ item.location_details.address_component.nation }}</view>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">时间</view>
+          <view class="weui-form-preview__value">{{ item.formatedDate }}</view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">地址</view>
+          <view class="weui-form-preview__value">{{ item.location_details.formatted_addresses.recommend }}</view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">详细地址</view>
+          <view class="weui-form-preview__value">{{ item.location_details.address }}</view>
+        </view>
+      </view>
+      <!-- <view class="weui-form-preview__ft">
+        <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
+      </view> -->
+    </view>
+
+    <template is="footer" data="{{text: 'forbar'}}" />
+
+  </view>
+</view>
+
+<view wx:if="{{ view }}">
+  <map
+    id="myMap"
+    markers="{{ markers}}"
+    show-location
+  ></map>
+
+  <view class="weui-footer" style="margin: 25px 15px 0 15px;">
+    <button class="weui-btn" type="primary" bindtap='changeView'>返回列表</button>
+  </view>
+</view>

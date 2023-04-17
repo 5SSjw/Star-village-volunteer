@@ -1,0 +1,93 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://636c-cloud1-4gem7fr950020315-1311023162.tcb.qcloud.la/%E9%82%80%E8%AF%B7%E7%A0%81.jpg?sign=0ba33d63358cd029c594b6dcb38c0f62&t=1652181816');
+  background-size: 100% 100%;
+}
+.jianju{
+     height: 20vh;
+}
+
+
+  /* 半透明渐变 */
+.bottom{
+  /* margin-top: 40rpx; */
+  /* bottom: 0; */
+  /* padding-top: 45vh; */
+  background: #ffd000; 
+  width: 80%;  
+  border-radius: 50rpx;
+  /* background: bg_red; */
+}
+
+ .v2{
+  position: relative;
+  margin-top: 150rpx;
+  left: 100rpx; 
+  width: 545rpx;
+  height: 550rpx;
+  /* background-color: rgb(250, 248, 248); */
+  border-radius: 50rpx;
+}
+/* 白色区域内的登录文本 */
+ .v2 .dltext{
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left:50rpx;
+  width: 150rpx;
+  height: 100rpx;
+  font-size: 60rpx;
+  font-family: Helvetica;
+  color: #fff;
+  line-height: 100rpx;
+  letter-spacing: 2rpx;
+}
+/* 手机图片+输入框+下划线的父容器view */
+ .v2 .phoneCs{
+   border-radius: 20rpx;
+  margin-top: 180rpx;
+  margin-left: 25rpx;
+  position: absolute;
+  display: flex;
+  width:480rpx ;
+  height: 90rpx ;
+  background-color: white;
+  
+}
+/* 手机图标 */
+ .v2 .phoneCs .ph{
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+/* 手机号输入框 */
+.v2 .phoneCs input{
+  width: 400rpx;
+  font-size: 30rpx ;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+}
+
+
+
+/* 登录按钮容器view */
+ .v2 .denglu{
+  width: 480rpx;
+  height: 80rpx;
+  position: absolute;
+  margin-top:330rpx;
+  margin-left:25rpx;
+  
+}
+/* 登录按钮 */
+ .v2 .denglu button{
+  padding: 0rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+

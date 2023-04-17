@@ -1,0 +1,92 @@
+<!--pages/contact/contact.wxml-->
+
+<view>
+  <scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+    <!-- <view class='scrollMsg'> -->
+    <block wx:key wx:for='{{msgList}}' wx:for-index="index">
+
+    <!-- 单个消息1对方发出（左） -->
+    <view wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+      <view style='width: 11vw; height: 11vw;'>
+        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/xiaozhixie.png'></image>
+      </view>
+      
+      <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+        <image style='width: 4vw;' src='../../images/left_msg.png' mode='widthFix'></image>
+      </view>
+      
+      <view class='leftMsg'>{{item.content}}</view>
+    </view>
+   
+    <!-- 单个消息2用户发出（右） -->
+    <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+      <view class='rightMsg'>{{item.content}}</view>
+      <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+        <image style='width: 4vw;' src='' mode='widthFix'></image>
+      </view>
+      <view style='width: 11vw; height: 11vw;'>
+        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/touxiang1.png'></image>
+      </view>
+      
+    </view>
+
+    </block>
+    <!-- </view> -->
+
+    <!-- 占位 -->
+    <view style='width: 100%; height: 18vw;'></view>
+  </scroll-view>
+</view>
+
+<!--  
+<view class='inputRoom' style='bottom: {{inputBottom}}'>
+  <image style='width: 7vw; margin-left: 3.2vw;' src='../../images/voice.png' mode='widthFix'></image>
+
+  <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+
+  <image style='width: 7vw; margin-left: 2.6vw;' src='../../images/more.png'  mode='widthFix'bindtap="onFeatures"></image>
+
+   <view class="input_box2" wx:if="{{isOn}}">
+		<block wx:if="{{isTabs == 'features'}}">
+			<view class="feat1" bindtap="toAddUser">
+				<image class="featImg" src="../../images/picture.png"></image>
+				<view class="featTitle">发送图片</view>
+			</view>
+		</block>
+			
+	</view>
+</view> 
+-->
+
+<!-- 底部发送区域 -->
+<view class="input_box"style='bottom: {{inputBottom}}'>
+		<view class="input_box1">
+			<image style='width: 7vw; margin-left: 3.2vw;' src='../../images/voice.png' mode='widthFix'></image>
+
+			<input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+		
+			<image style='width: 7vw; margin-left: 2.6vw;' src='../../images/more.png'  mode='widthFix'bindtap="onFeatures"></image>
+		</view>
+
+		<view class="input_box2" wx:if="{{isOn}}">
+			<block wx:for="{{emoji_list}}" wx:key="index" wx:if="{{isTabs == 'emoji'}}">
+				<image class="emoji" data-src="{{item.imgSrc}}" src="{{item.imgSrc}}" bindtap="sendEmoji"></image>
+			</block>
+
+			<block wx:if="{{isTabs == 'features'}}">
+				<view class="feat1" bindtap="toAddUser">
+					<image class="featImg" src="../../images/picture.png"bindtap="pictureClick"></image>
+					<view class="featTitle">相册</view>
+				</view>
+				<view class="feat1" bindtap="toAddUser">
+					<image class="featImg" src="../../images/photo.png"bindtap="photoClick"></image>
+					<view class="featTitle">拍摄</view>
+				</view>
+        <view class="feat1" bindtap="toAddUser">
+					<image class="featImg" src="../../images/file.png"bindtap="fileClick"></image>
+					<view class="featTitle">文件</view>
+				</view>
+			</block>
+			
+		</view>
+	</view>

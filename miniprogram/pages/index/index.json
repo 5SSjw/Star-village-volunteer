@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "SearchInput":"../../components/SearchInput/SearchInput",
+      "i-notice-bar": "../../dist/notice-bar/index",
+      
+      "i-load-more": "../../dist/load-more/index"
+  },
+  "navigationBarTitleText": "星村志愿",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,20 @@
+<scroll-view scroll-y class="scrollPage">
+ <image src='/images/anquanbaozhang1.jpg' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+  <view class='nav-list'>
+    <navigator url="/pages/phone/phone" class="nav-li bg-cyan"  >
+      <view class="nav-title">求助电话</view>
+      <view class="nav-name">Phone</view>
+      <text class='cuIcon-phone'></text>
+    </navigator>
+   <navigator open-type="navigate" hover-class='none' url="/pages/{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" 
+    wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator> 
+
+    
+  </view>
+  <view class='cu-tabbar-height'></view> 
+
+</scroll-view>

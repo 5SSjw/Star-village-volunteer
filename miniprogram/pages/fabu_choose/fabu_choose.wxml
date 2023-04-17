@@ -1,0 +1,146 @@
+<!-- <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 菜单列表
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="menuModal">设置</button>
+    </view>
+</view> -->
+  <view class="cu-modal {{modalName=='menuModal'?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <scroll-view scroll-y style="height:300rpx">
+        <view class="cu-list menu text-left solid-top">
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">短边框</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuBorder"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">箭头</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuArrow"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">卡片</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuCard"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">短边框</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuBorder"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">箭头</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuArrow"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">卡片</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuCard"></switch>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}" bindtap="add">
+      <view class="content">
+        <text class="cuIcon-circlefill text-grey"></text>
+        <text class="text-grey">活动管理</text>
+      </view>
+    </view>
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}" bindtap="zixunadd">
+      <view class="content">
+        <text class="cuIcon-tagfill text-red"></text>
+        <text class="text-grey">资讯管理</text>
+      </view>
+    </view>
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}">
+      <button class="cu-btn content" open-type="contact">
+        <text class="cuIcon-btn text-olive"></text>
+        <text class="text-grey">系统通知</text>
+      </button>
+    </view>
+    <!-- <view class="cu-item {{menuArrow?'arrow':'arrow'}}">
+      <navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
+        <text class="cuIcon-discoverfill text-orange"></text>
+        <text class="text-grey">Navigator 跳转</text>
+      </navigator>
+    </view>
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}">
+      <view class="content">
+        <text class="cuIcon-emojiflashfill text-pink"></text>
+        <text class="text-grey">头像组</text>
+      </view>
+      <view class="action">
+        <view class="cu-avatar-group">
+          <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10004.jpg);"></view>
+          <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10003.jpg);"></view>
+          <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10002.jpg);"></view>
+          <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+        </view>
+        <text class="text-grey text-sm">4 人</text>
+      </view>
+    </view>
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}">
+      <view class="content">
+        <text class="cuIcon-btn text-green"></text>
+        <text class="text-grey">按钮</text>
+      </view>
+      <view class="action">
+        <button class="cu-btn round bg-green shadow">
+          <text class="cuIcon-upload"></text> 上传</button>
+      </view>
+    </view>
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}">
+      <view class="content">
+        <text class="cuIcon-tagfill text-red"></text>
+        <text class="text-grey">标签</text>
+      </view>
+      <view class="action">
+        <view class="cu-tag round bg-orange light">音乐</view>
+        <view class="cu-tag round bg-olive light">电影</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view>
+    <view class="cu-item {{menuArrow?'arrow':'arrow'}}">
+      <view class="content">
+        <text class="cuIcon-warn text-green"></text>
+        <text class="text-grey">文本</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">小目标还没有实现！</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content padding-tb-sm">
+        <view>
+          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 多行Item</view>
+        <view class="text-gray text-sm">
+          <text class="cuIcon-infofill margin-right-xs"></text> 小目标还没有实现！</view>
+      </view>
+      <view class="action">
+        <switch class="switch-sex sm" bindchange="switchSex"></switch>
+      </view>
+    </view> -->
+  </view>

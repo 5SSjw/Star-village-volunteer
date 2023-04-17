@@ -1,0 +1,27 @@
+<!--miniprogram/pages/index/success/success.wxml-->
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="93"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">打卡成功</view>
+            <view class="weui-msg__desc">恭喜您已经打卡签到成功！</view>
+            <view class="weui-msg__desc">返回上一页到我的足迹里去看看吧！</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <!-- <button class="weui-btn" type="primary" bindtap='share'>分享小程序</button> -->
+                <button class="weui-btn" type="default" bindtap='goBack'>返回</button>
+            </view>
+        </view>
+        <view class="weui-msg__extra-area" style="margin-bottom: 40px;">
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="" class="weui-footer__link">星村志愿</navigator>
+                </view>
+                <view class="weui-footer__text">Copyright © 2022</view>
+            </view>
+        </view>
+    </view>
+</view>

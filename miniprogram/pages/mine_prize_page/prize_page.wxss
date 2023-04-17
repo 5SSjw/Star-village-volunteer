@@ -1,0 +1,47 @@
+/* 列表样式 */
+
+.list{
+  background: #ffffff;
+  padding: 10rpx;
+  display: flex;
+  margin-top: 20rpx;
+  border-radius: 4%;
+}
+.list-img image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.list-info{
+  padding-left: 20rpx;
+  position: relative;
+}
+.title{
+  color: #93D5DC;
+  font-size: 35rpx;
+  margin-bottom: 14rpx;
+}
+.info{
+  font-size: 26rpx;
+  color: #666666;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.info-bottom{
+  position: absolute;
+  color: rgb(194, 164, 128);
+  bottom: 5%;
+  left: 10%;
+  font-size: 30rpx;
+  flex: 1;
+}
+
+.end{
+  color: #93D5DC;
+  margin-top: 80rpx;
+  margin-bottom: 100rpx;
+  text-align: center;
+}

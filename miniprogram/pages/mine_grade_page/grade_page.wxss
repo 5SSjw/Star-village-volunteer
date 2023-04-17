@@ -1,0 +1,100 @@
+/* pages/grade_page/grade_page.wxss */
+
+.info{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grade_touxiang{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.grade_nicheng{
+  font-size: 35rpx;
+}
+
+.grade_and_score{
+  margin-left: 40rpx;
+  font-size: 30rpx;
+}
+
+.bigFont{
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+}
+
+.rule{
+  background-color: white;
+  margin: 0% 3%;
+  font-size: 35rpx;
+}
+
+.white_block{
+  margin: 2% 0% ;
+  background-color: white;
+  padding: 12rpx 15rpx;
+  border-radius: 4%;
+}
+
+.bigColorText{
+  font-size: 80rpx;
+  color: #93D5DC;
+}
+
+.colorText{
+  font-size: 50rpx;
+  color: #93D5DC;
+}
+
+.list{
+  background: #ffffff;
+  padding: 10rpx;
+  display: flex;
+  margin-top: 20rpx;
+  border-radius: 4%;
+}
+.list-img image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.list-info{
+  padding-left: 20rpx;
+  position: relative;
+}
+.title{
+  color: #93D5DC;
+  font-size: 35rpx;
+  margin-bottom: 14rpx;
+}
+.detail{
+  font-size: 26rpx;
+  color: #666666;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.detail-bottom{
+  position: absolute;
+  color: rgb(162, 201, 130);
+  bottom: 2rpx;
+  right: 20rpx;
+  font-size: 35rpx;
+  flex: 1;
+}
+.end{
+  color: #93D5DC;
+  margin-top: 80rpx;
+  margin-bottom: 100rpx;
+  text-align: center;
+}
+
+
+ 

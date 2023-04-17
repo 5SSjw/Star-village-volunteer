@@ -1,0 +1,23 @@
+<block wx:for="{{zixunList}}" wx:key="index">
+	<navigator url="/pages/zixun_detail/zixun_detail?_id={{item._id}}">
+    <view class="cu-card article " >
+      <view class="cu-item shadow">
+        <view class="title">
+        <!-- 标题 -->
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.faceIMG}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content"> {{item.text}}</view>
+            <view style="text-align: right;">
+              <view class="cu-tag bg-red light sm round">{{item.tag1}}</view>
+              <view class="cu-tag bg-green light sm round">{{item.tag2}} </view>
+              <view class="cu-tag bg-black light sm round">{{item.time}} </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</block>  
